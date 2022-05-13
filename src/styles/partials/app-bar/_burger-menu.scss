@@ -1,0 +1,13 @@
+.header {
+  .burger-menu-container {
+    @media screen and(min-width: $mobile) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 19px;
+      .burger-menu-btn {
+        background-color: transparent;
+      }
+    }
+  }
+}

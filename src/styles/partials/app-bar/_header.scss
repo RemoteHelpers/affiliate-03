@@ -1,0 +1,9 @@
+.header {
+  @media screen and(min-width: $mobile) {
+    height: 50px;
+    border-bottom: 2px solid white;
+    .container {
+      display: flex;
+    }
+  }
+}

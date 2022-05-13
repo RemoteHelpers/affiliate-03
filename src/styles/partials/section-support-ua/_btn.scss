@@ -1,0 +1,21 @@
+.section-support-ua {
+  .btn {
+    @media screen and(min-width: $mobile) {
+      @include standartBtn(200px, 200px, transparent, dashed white);
+      border-radius: 50%;
+      padding-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      p {
+        width: 105px;
+        font-family: "AbroSans-Regular";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 120%;
+        text-align: center;
+        color: $accentRed;
+      }
+    }
+  }
+}

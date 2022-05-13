@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  background: $blackContent;
+}
+ul[class],
+ol[class] {
+  padding: 0;
+}
+button,
+a {
+  border: none;
+  padding: 0;
+  margin: 0;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd,
+button {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+section,
+header,
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+@font-face {
+  font-family: "AbroSans-Bold";
+  src: url("../../fonts/AbroSans-Bold.ttf") format("opentype");
+}
+@font-face {
+  font-family: "AbroSans-Regular";
+  src: url("../../fonts/AbroSans-Regular.ttf") format("opentype");
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "AbroSans-Bold";
+}
+p {
+  font-family: "AbroSans-Regular";
+}

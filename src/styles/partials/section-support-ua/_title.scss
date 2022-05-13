@@ -1,0 +1,11 @@
+.section-support-ua {
+  .title-container {
+    @media screen and(min-width: $mobile) {
+      border-bottom: 2px solid #ffffff;
+      margin-bottom: 30px;
+      .title {
+        @include standartTitle(36px, 120%);
+      }
+    }
+  }
+}

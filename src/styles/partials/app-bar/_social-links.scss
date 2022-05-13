@@ -1,0 +1,7 @@
+.header {
+  .social-links-container {
+    @media screen and(min-width: $mobile) {
+      display: none;
+    }
+  }
+}

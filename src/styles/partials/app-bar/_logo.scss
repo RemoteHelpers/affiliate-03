@@ -1,0 +1,16 @@
+.header {
+  .logo-container {
+    @media screen and(min-width: $mobile) {
+      height: inherit;
+      display: flex;
+      align-items: center;
+      padding-right: 9px;
+      border-right: 2px solid white;
+      .logo {
+        width: 97px;
+        height: 23px;
+        fill: white;
+      }
+    }
+  }
+}

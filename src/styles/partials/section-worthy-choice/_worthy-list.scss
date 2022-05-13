@@ -1,0 +1,36 @@
+.section-worthy-choise {
+  .worthy-list {
+    @media screen and(min-width: $mobile) {
+      .worthy-item {
+        margin-bottom: 25px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .item-title {
+          position: relative;
+          width: fit-content;
+          @include standartTitle(18px, 120%);
+          margin-bottom: 10px;
+          span {
+            display: block;
+          }
+          &::after {
+            position: absolute;
+            content: url("../../../svg/arrow.svg");
+            width: 33.5px;
+            height: 31px;
+            display: inline;
+            top: 0;
+            right: -53.5px;
+          }
+        }
+        .description-container {
+          width: 50vw;
+          p {
+            @include standartDescription(12px, 170%);
+          }
+        }
+      }
+    }
+  }
+}

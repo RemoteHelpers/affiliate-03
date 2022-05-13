@@ -1,0 +1,7 @@
+.header {
+  .support-ua-container {
+    @media screen and(min-width: $mobile) {
+      display: none;
+    }
+  }
+}

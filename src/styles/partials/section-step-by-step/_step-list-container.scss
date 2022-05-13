@@ -1,0 +1,48 @@
+.section-step-by-step {
+  .step-list-container {
+    @media screen and(min-width: $mobile) {
+      .step-list-title {
+        @include standartTitle(24px, 120%);
+        margin-bottom: 30px;
+      }
+      .step-item {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .item-number-container {
+        width: 38px;
+        height: 38px;
+        display: table-cell;
+        vertical-align: middle;
+        padding-top: 10px;
+        background-image: url("../../../svg/number-wrapper.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 15px;
+        p {
+          @include standartTitle(24px, 1);
+          text-align: center;
+        }
+      }
+      .item-title {
+        max-width: 128px;
+        @include standartTitle(18px, 120%);
+        margin-bottom: 20px;
+      }
+      .item-descr-container {
+        min-width: 100%;
+        p {
+          @include standartDescription(12px, 170%);
+          span {
+            display: block;
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+  }
+}

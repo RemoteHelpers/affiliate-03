@@ -1,0 +1,30 @@
+$accentYellow: #fbbf13;
+$accentRed: #fb1515;
+$blackContent: #141414;
+
+$mobile: 360px;
+$tablet: 768px;
+$desktop: 1200px;
+$fullHD: 1920px;
+
+@mixin standartBtn($w, $h, $bc, $b) {
+  width: $w;
+  height: $h;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bc;
+  border: $b;
+}
+
+@mixin standartTitle($fs, $lh) {
+  font-family: "AbroSans-Bold";
+  font-size: $fs;
+  line-height: $lh;
+}
+
+@mixin standartDescription($fs, $lh) {
+  font-family: "AbroSans-Regular";
+  font-size: $fs;
+  line-height: $lh;
+}

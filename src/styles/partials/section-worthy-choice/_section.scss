@@ -1,0 +1,16 @@
+.section-worthy-choise {
+  @media screen and(min-width: $mobile) {
+    padding-bottom: 200px;
+    isolation: isolate;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: url("../../../gifs/remote-helpers.gif");
+      background-position-y: 93%;
+      background-repeat: no-repeat;
+      background-size: 570px 119px;
+      opacity: 0.5;
+    }
+  }
+}

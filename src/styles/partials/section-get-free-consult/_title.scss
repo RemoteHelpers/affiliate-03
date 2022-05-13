@@ -1,0 +1,21 @@
+.section-get-consult {
+  .title-container {
+    @media screen and(min-width: $mobile) {
+      position: relative;
+      .title {
+        @include standartTitle(36px, 120%);
+        color: $accentYellow;
+      }
+      .arrow-svg * {
+        color: $accentYellow;
+        stroke: $accentYellow;
+      }
+      .arrow-svg {
+        position: absolute;
+        right: 0;
+        top: 25%;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

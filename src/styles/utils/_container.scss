@@ -1,0 +1,14 @@
+.container {
+  @media screen and (min-width: $mobile) {
+    width: 345px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 768px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 1200px;
+  }
+  @media screen and (min-width: $fullHD) {
+    width: 1920px;
+  }
+}
