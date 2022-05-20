@@ -5,13 +5,13 @@ import Title from "../components/Title";
 
 function SectionSupportUA() {
   return (
-    <Section tag="section" className="section-support-ua">
-      <Container tag="div" className="title-container">
-        <Title priority={2} className="title">
+    <Section className="section-support-ua">
+      <Container className="title-container">
+        <Title>
           Let`s help each other in the current situation
         </Title>
       </Container>
-      <Container tag="div" className="description-container">
+      <Container className="description-container">
         <p>
           Hiring Ukrainians, you help each family save their incomes in such a
           terrible military environment that appears now in a beautiful country.
@@ -31,7 +31,7 @@ function SectionSupportUA() {
           us is the right option if you intend to join this mission and help.
         </p>
       </Container>
-      <Button type="button" className="btn">
+      <Button>
         <p>Become Helper</p>
       </Button>
     </Section>

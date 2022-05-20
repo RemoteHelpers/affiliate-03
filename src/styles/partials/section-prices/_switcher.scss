@@ -1,0 +1,8 @@
+.section-prices {
+  .switch {
+    @media screen and(min-width: $mobile) {
+      @include switcher;
+      @include backgroundSwitchMobile;
+    }
+  }
+}

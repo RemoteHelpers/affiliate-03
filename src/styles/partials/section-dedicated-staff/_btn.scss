@@ -1,0 +1,14 @@
+.section-dedicated-staff {
+  .btn {
+    @media screen and(min-width: $mobile) {
+      @include standartBtn(200px, 200px, transparent, dashed white);
+      border-radius: 50%;
+      padding-top: 3px;
+      margin-left: auto;
+      margin-right: auto;
+      p {
+        @include standartDescription(24px, 120%);
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.section-prices {
+  .title-container {
+    @media screen and(min-width: $mobile) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      .title {
+        @include standartTitle(24px, 120%);
+        text-transform: uppercase;
+        color: #fff;
+        &.is-active {
+          color: $accentYellow;
+          transition: 0.3s ease-out;
+        }
+      }
+    }
+  }
+}

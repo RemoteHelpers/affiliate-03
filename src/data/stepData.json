@@ -1,0 +1,18 @@
+[
+  {
+    "step": "Fill the contact form",
+    "descriptions": ["Tell us about your project and needs"]
+  },
+  {
+    "step": "Choose candidates",
+    "descriptions": ["Get the CVs list to fit you"]
+  },
+  {
+    "step": "Hold an interview",
+    "descriptions": ["Meet the candidates", "Google Meet", "Zoom", "Skype"]
+  },
+  {
+    "step": "Sign the contract",
+    "descriptions": ["Start onboarding ASAP"]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Assistant",
+    "description": "The helper for managing calls and meetings, document organization, providing administrative services.",
+    "fullTimePrice": 800,
+    "partTimePrice": 500
+  },
+  {
+    "title": "Sales Manager",
+    "description": "Get quality sales consulting and lead generation services.",
+    "fullTimePrice": 800,
+    "partTimePrice": 500
+  },
+  {
+    "title": "Marketer",
+    "description": "Need help in generating content and raising awareness about a product? Right choice.",
+    "fullTimePrice": 1000,
+    "partTimePrice": 700
+  },
+  {
+    "title": "Designer",
+    "description": "Our employee is ready to create visual content, creatives, illustrations, and landing pages.",
+    "fullTimePrice": 1200,
+    "partTimePrice": 900
+  },
+  {
+    "title": "Developer",
+    "description": "All concerning the development of the site and its optimization is not a problem for developers.",
+    "fullTimePrice": 1400,
+    "partTimePrice": 1100
+  }
+]

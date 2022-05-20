@@ -1,12 +1,12 @@
 .section-get-consult {
   .speciality-list {
     @media screen and(min-width: $mobile) {
+      border: 2px solid white;
       .speciality-item {
-        width: 345px;
+        width: 100%;
         height: 342px;
-        border: 2px solid white;
         padding-top: 30px;
-        // padding-left: 15px;
+        border-bottom: 2px solid white;
         .item-title {
           @include standartTitle(24px, 120%);
           text-align: center;
@@ -24,6 +24,9 @@
               }
             }
           }
+        }
+        &:last-child {
+          border-bottom: none;
         }
       }
     }

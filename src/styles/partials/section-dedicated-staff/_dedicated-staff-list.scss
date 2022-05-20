@@ -1,24 +1,33 @@
-.dedicated-staff-list {
-  @media screen and(min-width: $mobile) {
-    .dedicated-staff-item {
-      display: flex;
-      border-bottom: 2px solid #fff;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      .number-container {
-        display: table;
-        margin-right: 12px;
-        p {
-          display: table-cell;
-          vertical-align: middle;
-          width: 25px;
-          @include standartTitle(36px, 120%);
+.section-dedicated-staff {
+  .dedicated-staff-list {
+    @media screen and(min-width: $mobile) {
+      margin-bottom: 50px;
+      .dedicated-staff-item {
+        display: flex;
+        border-bottom: 2px solid #fff;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        .number-container {
+          display: table;
+          margin-right: 12px;
+          p {
+            display: table-cell;
+            vertical-align: middle;
+            width: 25px;
+            @include standartTitle(36px, 120%);
+          }
         }
-      }
-      .description-container {
-        p {
-          line-height: inherit;
-          @include standartDescription(12px, 170%);
+        .description-container {
+          p {
+            @include standartDescription(12px, 170%);
+          }
+        }
+        &:nth-child(5) {
+          .description-container {
+            p {
+              width: 230px;
+            }
+          }
         }
       }
     }

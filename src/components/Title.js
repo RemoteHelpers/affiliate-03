@@ -1,4 +1,4 @@
-function Title({ priority, className, children }) {
+function Title({ priority = 2, className = "title", children }) {
   const HTag = `h${priority}`;
   return (
     <>

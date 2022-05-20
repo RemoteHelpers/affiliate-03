@@ -1,4 +1,4 @@
-function Section({ tag, className, children }) {
+function Section({ tag="section", className, children }) {
   const TagName = tag;
   return (
     <TagName className={className}>

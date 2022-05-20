@@ -1,6 +1,6 @@
-import Section from "./Section";
-import Container from "./Container";
-import Button from "./Button";
+import Section from "../components/Section";
+import Container from "../components/Container";
+import Button from "../components/Button";
 import { ReactComponent as Logo } from "../svg/logo-hover.svg";
 import { ReactComponent as Skype } from "../svg/skype.svg";
 import { ReactComponent as Telegram } from "../svg/telegram.svg";

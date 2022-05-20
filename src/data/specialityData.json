@@ -1,0 +1,40 @@
+[
+  {
+    "speciality": "Assistant",
+    "types": ["Accountant", "Personal assistant", "Customer support"]
+  },
+  {
+    "speciality": "Sales",
+    "types": ["Data entry", "Sales manager", "Lead generator"]
+  },
+  {
+    "speciality": "Marketer",
+    "types": [
+      "Project Manager",
+      "Content Manager",
+      "SEO/ SMM/ PPC",
+      "Influencer Manager",
+      "Copywriter",
+      "Email marketer"
+    ]
+  },
+  {
+    "speciality": "Designer",
+    "types": [
+      "UI/UX designer",
+      "Graphic designer",
+      "Web designer",
+      "Illustrator",
+      "Video editor"
+    ]
+  },
+  {
+    "speciality": "Developer",
+    "types": [
+      "Full stack developer",
+      "Frontend developer",
+      "Backend developer",
+      "QA tester"
+    ]
+  }
+]

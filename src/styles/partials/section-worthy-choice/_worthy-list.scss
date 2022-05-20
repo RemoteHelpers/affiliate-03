@@ -11,9 +11,6 @@
           width: fit-content;
           @include standartTitle(18px, 120%);
           margin-bottom: 10px;
-          span {
-            display: block;
-          }
           &::after {
             position: absolute;
             content: url("../../../svg/arrow.svg");
@@ -28,6 +25,46 @@
           width: 50vw;
           p {
             @include standartDescription(12px, 170%);
+          }
+        }
+        &:nth-child(1) {
+          .item-title {
+            width: 87px;
+          }
+          .description-container p {
+            width: 236px;
+          }
+        }
+        &:nth-child(2) {
+          .item-title {
+            width: 133px;
+          }
+          .description-container p {
+            width: 219px;
+          }
+        }
+        &:nth-child(3) {
+          .item-title {
+            width: 116px;
+          }
+          .description-container p {
+            width: 219px;
+          }
+        }
+        &:nth-child(4) {
+          .item-title {
+            width: 120px;
+          }
+          .description-container p {
+            width: 210px;
+          }
+        }
+        &:nth-child(5) {
+          .item-title {
+            width: 107px;
+          }
+          .description-container p {
+            width: 160px;
           }
         }
       }
