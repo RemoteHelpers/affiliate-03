@@ -5,42 +5,86 @@
         @include standartTitle(24px, 120%);
         margin-bottom: 30px;
       }
-      .step-item {
+      .step-list {
+        .step-item {
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 25px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          &:nth-child(3) {
+            p:not(:first-child) {
+              padding-left: 20px;
+            }
+          }
+          .item-number-container {
+            width: 38px;
+            height: 38px;
+            display: table-cell;
+            vertical-align: middle;
+            padding-top: 10px;
+            background-image: url("../../../svg/number-wrapper.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-right: 15px;
+            p {
+              @include standartTitle(24px, 1);
+              text-align: center;
+            }
+          }
+          .item-title {
+            max-width: 128px;
+            @include standartTitle(18px, 120%);
+            margin-bottom: 20px;
+          }
+          .item-descr-container {
+            min-width: 100%;
+            p {
+              @include standartDescription(12px, 170%);
+            }
+          }
+        }
+      }
+    }
+    @media screen and(min-width: $mobileMax) {
+      .step-list {
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 25px;
-        &:last-child {
-          margin-bottom: 0;
-        }
-        &:nth-child(3) {
-          p:not(:first-child) {
-            padding-left: 20px;
+        .step-item {
+          width: 45%;
+          margin-bottom: 50px;
+          .item-title,
+          .item-descr-container {
+            width: fit-content;
+            height: fit-content;
+          }
+          &:last-child {
+            flex-wrap: wrap;
+            .item-descr-container {
+              display: block;
+              height: 100%;
+            }
+          }
+          &:nth-child(odd) {
+            margin-right: 40px;
+          }
+          &:nth-child(3n) {
+            margin-bottom: 0;
           }
         }
-        .item-number-container {
-          width: 38px;
-          height: 38px;
-          display: table-cell;
-          vertical-align: middle;
-          padding-top: 10px;
-          background-image: url("../../../svg/number-wrapper.svg");
-          background-size: contain;
-          background-repeat: no-repeat;
-          margin-right: 15px;
-          p {
-            @include standartTitle(24px, 1);
-            text-align: center;
+      }
+    }
+    @media screen and(min-width: $tablet) {
+      .step-list {
+        .step-item {
+          .item-descr-container p {
+            font-size: 18px;
           }
-        }
-        .item-title {
-          max-width: 128px;
-          @include standartTitle(18px, 120%);
-          margin-bottom: 20px;
-        }
-        .item-descr-container {
-          min-width: 100%;
-          p {
-            @include standartDescription(12px, 170%);
+          &:nth-child(3) p:not(:first-child)::before {
+            content: "\2022";
+            font-weight: 700;
+            margin-right: 10px;
           }
         }
       }

@@ -1,6 +1,8 @@
 import Section from "../components/Section";
 import Container from "../components/Container";
 import Button from "../components/Button";
+import List from "../components/List";
+import Link from "../components/Link";
 import { ReactComponent as Logo } from "../svg/logo-hover.svg";
 import { ReactComponent as Skype } from "../svg/skype.svg";
 import { ReactComponent as Telegram } from "../svg/telegram.svg";
@@ -20,13 +22,36 @@ function AppBar() {
           <p>Support Ukrainians</p>
         </Button>
       </Container>
-      <Container tag="div" className="social-links-container">
-        <Skype className="skype-svg" width={40} height={40} />
-        <Telegram className="telegram-svg" width={40} height={40} />
-        <Viber className="viber-svg" width={40} height={40} />
-        <WhatsApp className="whatsapp-svg" width={40} height={40} />
-        <Email className="email-svg" width={40} height={40} />
-      </Container>
+      <List
+        className="social-link-list"
+        list={[
+          <li key="app-bar-skype" className="social-link-item">
+            <Link>
+              <Skype className="skype-svg" width={40} height={40} />
+            </Link>
+          </li>,
+          <li key="app-bar-telegram" className="social-link-item">
+            <Link>
+              <Telegram className="telegram-svg" width={40} height={40} />
+            </Link>
+          </li>,
+          <li key="app-bar-viber" className="social-link-item">
+            <Link>
+              <Viber className="viber-svg" width={40} height={40} />
+            </Link>
+          </li>,
+          <li key="app-bar-whatsapp" className="social-link-item">
+            <Link>
+              <WhatsApp className="whatsapp-svg" width={40} height={40} />
+            </Link>
+          </li>,
+          <li key="app-bar-email" className="social-link-item">
+            <Link>
+              <Email className="email-svg" width={40} height={40} />
+            </Link>
+          </li>,
+        ]}
+      />
       <Container tag="div" className="get-consult-container">
         <Button type="button" className="get-consult-btn">
           <p>Get Free Consultation</p>

@@ -22,12 +22,29 @@
         position: absolute;
         width: 114.56px;
         height: 302.39px;
-        left: 220.77px;
+        right: 12px;
         top: 50px;
         z-index: -1;
         background: rgba(227, 60, 17, 0.7);
         filter: blur(50px);
         transform: rotate(21.9deg);
+      }
+    }
+  }
+  @media screen and(min-width: $mobileMax) {
+    .container {
+      &::after,
+      &::before {
+        right: 112px;
+      }
+    }
+  }
+  @media screen and(min-width: $tablet) {
+    padding-top: 70px;
+    .container {
+      &::after,
+      &::before {
+        right: 252px;
       }
     }
   }

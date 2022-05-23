@@ -7,6 +7,8 @@ import SectionWorthyChoise from "./sections/SectionWorthyChoise";
 import SectionDedicatedStaff from "./sections/SectionDedicatedStaff";
 import SectionPrices from "./sections/SectionPrices";
 import SectionCustomersSay from "./sections/SectionCustomersSay";
+import SectionContactForm from "./sections/SectionContactForm";
+import Footer from "./sections/Footer";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <SectionDedicatedStaff />
       <SectionPrices />
       <SectionCustomersSay />
+      <SectionContactForm />
+      <Footer />
     </>
   );
 }

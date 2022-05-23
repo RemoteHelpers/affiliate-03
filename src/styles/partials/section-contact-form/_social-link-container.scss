@@ -1,0 +1,24 @@
+.section-contact-form {
+  .social-link-container {
+    @media screen and(min-width: $mobile) {
+      .social-link-list {
+        .social-link-item {
+          margin-bottom: 30px;
+          a {
+            display: flex;
+            align-items: center;
+            p {
+              @include standartTitle(24px, 120%);
+              display: block;
+              line-height: 1;
+              margin-left: 15px;
+            }
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

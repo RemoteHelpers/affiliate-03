@@ -16,6 +16,13 @@
         text-align: center;
         color: $accentRed;
       }
+      &:hover {
+        border: none;
+        background-color: $accentRed;
+        &:hover p {
+          color: white;
+        }
+      }
     }
   }
 }

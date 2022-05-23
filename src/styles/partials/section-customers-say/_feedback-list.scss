@@ -1,0 +1,18 @@
+.section-customers-say {
+  .feedback-list {
+    @media screen and(min-width: $mobile) {
+      .feedback-item {
+        margin-bottom: 40px;
+        .item-title {
+          @include standartTitle(24px, 120%);
+        }
+        .description {
+          @include standartDescription(12px, 170%);
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

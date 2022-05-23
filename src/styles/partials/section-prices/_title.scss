@@ -14,5 +14,11 @@
         }
       }
     }
+    @media screen and(min-width: $mobileMax) {
+      .title {
+        padding-right: 40px;
+        padding-left: 40px;
+      }
+    }
   }
 }

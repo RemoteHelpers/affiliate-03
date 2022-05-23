@@ -16,7 +16,7 @@ function SectionCustomersSay() {
         className="feedback-list"
         list={[
           feedbackData.map(({ name, comment }) => (
-            <li key={name}>
+            <li key={name} className="feedback-item">
               <Title priority={3} className="item-title">
                 {name}
               </Title>

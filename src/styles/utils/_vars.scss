@@ -3,7 +3,9 @@ $accentRed: #fb1515;
 $blackContent: #141414;
 
 $mobile: 360px;
+$mobileMax: 562px;
 $tablet: 768px;
+$tabletMax: 992px;
 $desktop: 1200px;
 $fullHD: 1920px;
 
@@ -15,11 +17,16 @@ $fullHD: 1920px;
   align-items: center;
   background-color: $bc;
   border: $b;
+  transition: 0.3s ease-out;
+  p {
+    transition: 0.3s ease-out;
+  }
   &:hover {
-    border: dashed $accentYellow;
+    background-color: $accentYellow;
+    border: none;
   }
   &:hover p {
-    color: $accentYellow;
+    color: $blackContent;
   }
 }
 @mixin standartTitle($fs, $lh) {

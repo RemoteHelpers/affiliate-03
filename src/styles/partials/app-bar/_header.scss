@@ -6,4 +6,11 @@
       display: flex;
     }
   }
+  @media screen and(min-width: $mobileMax) {
+    .container {
+      width: fit-content;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
 }

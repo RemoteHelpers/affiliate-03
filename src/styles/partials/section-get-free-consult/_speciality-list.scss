@@ -30,5 +30,25 @@
         }
       }
     }
+    @media screen and(min-width: $mobileMax) {
+      .speciality-item {
+        .speciality-diversity-list {
+          padding-left: 60px;
+        }
+      }
+    }
+    @media screen and(min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      .speciality-item {
+        width: 50%;
+        .speciality-diversity-list {
+          padding-left: 0;
+        }
+        &:nth-child(odd) {
+          border-right: 2px solid white;
+        }
+      }
+    }
   }
 }

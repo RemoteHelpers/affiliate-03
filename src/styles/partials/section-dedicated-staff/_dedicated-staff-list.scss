@@ -8,16 +8,17 @@
         padding-top: 15px;
         padding-bottom: 15px;
         .number-container {
-          display: table;
+          display: block;
           margin-right: 12px;
           p {
-            display: table-cell;
-            vertical-align: middle;
+            display: block;
             width: 25px;
-            @include standartTitle(36px, 120%);
+            @include standartTitle(36px, 1);
           }
         }
         .description-container {
+          display: flex;
+          align-items: center;
           p {
             @include standartDescription(12px, 170%);
           }
@@ -26,6 +27,17 @@
           .description-container {
             p {
               width: 230px;
+            }
+          }
+        }
+      }
+    }
+    @media screen and(min-width: $mobileMax) {
+      .dedicated-staff-item {
+        &:nth-child(5) {
+          .description-container {
+            p {
+              width: 100%;
             }
           }
         }

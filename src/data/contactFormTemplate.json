@@ -1,0 +1,55 @@
+[
+  {
+    "tag": "input",
+    "type": "text",
+    "name": "client_name",
+    "required": true,
+    "placeholder": "Name"
+  },
+  {
+    "tag": "input",
+    "type": "text",
+    "name": "client_email",
+    "required": true,
+    "placeholder": "Email"
+  },
+  {
+    "tag": "input",
+    "type": "number",
+    "name": "client_phone",
+    "required": true,
+    "placeholder": "Phone number"
+  },
+  {
+    "tag": "textarea",
+    "type": "text",
+    "name": "note",
+    "required": false,
+    "placeholder": "Your message"
+  },
+  {
+    "tag": "input",
+    "type": "text",
+    "name": "global_company_name",
+    "placeholder": "Your company",
+    "required": false,
+    "hidden": true,
+    "value": "Remote Helpers"
+  },
+  {
+    "tag": "input",
+    "type": "text",
+    "name": "project_company",
+    "placeholder": "Your company",
+    "required": false,
+    "hidden": true,
+    "value": "RHS"
+  },
+  {
+    "tag": "input",
+    "type": "text",
+    "name": "promocode",
+    "hidden": true,
+    "value": "MVO1Z1W21WOS"
+  }
+]

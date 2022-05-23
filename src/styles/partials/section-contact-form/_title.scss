@@ -1,20 +1,10 @@
-.section-customers-say {
+.section-contact-form {
   .title-container {
     @media screen and(min-width: $mobile) {
       border-bottom: 2px solid #fff;
       margin-bottom: 30px;
       .title {
         @include standartTitle(36px, 120%);
-        span {
-          display: block;
-        }
-      }
-    }
-    @media screen and(min-width: $mobile) {
-      .title {
-        span {
-          display: inline;
-        }
       }
     }
   }

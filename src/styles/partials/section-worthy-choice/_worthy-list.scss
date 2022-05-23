@@ -69,5 +69,13 @@
         }
       }
     }
+    @media screen and(min-width: $mobileMax) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .worthy-item {
+        width: 50%;
+      }
+    }
   }
 }

@@ -1,0 +1,50 @@
+.section-contact-form {
+  @media screen and(min-width: $mobile) {
+    .form-title {
+      @include standartTitle(24px, 120%);
+      margin-bottom: 15px;
+    }
+    .contact-form {
+      margin-bottom: 34px;
+      input,
+      textarea {
+        width: 100%;
+        padding: 13px 10px;
+        margin-bottom: 25px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: transparent;
+        color: $accentYellow;
+        @include standartDescription(12px, 120%);
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.5);
+        }
+        &:active,
+        &:focus {
+          outline: none;
+          border: 1px solid $accentYellow;
+        }
+      }
+      textarea {
+        height: 190px;
+      }
+      .submit-btn {
+        width: 163px;
+        display: block;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        text-align: center;
+        @include standartTitle(24px, 120%);
+        margin-right: auto;
+        margin-left: auto;
+        color: $accentYellow;
+        background-color: transparent;
+        border: 1px solid $accentYellow;
+        transition: 0.3s ease-out;
+        &:hover {
+          background-color: $accentYellow;
+          color: $blackContent;
+        }
+      }
+    }
+  }
+}

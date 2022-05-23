@@ -17,5 +17,10 @@
         transform: rotate(180deg);
       }
     }
+    @media screen and(min-width: $mobileMax) {
+      .arrow-svg {
+        top: -3px;
+      }
+    }
   }
 }
