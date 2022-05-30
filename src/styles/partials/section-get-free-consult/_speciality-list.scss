@@ -48,6 +48,49 @@
         &:nth-child(odd) {
           border-right: 2px solid white;
         }
+        &:nth-child(3) {
+          border-bottom: none;
+        }
+      }
+    }
+    @media screen and(min-width: $tabletMax) {
+      .speciality-item {
+        .speciality-diversity-list {
+          padding-left: 50px;
+        }
+      }
+    }
+    @media screen and(min-width: $desktop) {
+      .speciality-item {
+        width: 25%;
+        border-bottom: none;
+        .item-title {
+          margin-bottom: 20px;
+          font-size: 32px;
+        }
+        .speciality-diversity-list {
+          padding: 20px;
+        }
+        &:nth-child(2) {
+          border-right: 2px solid white;
+        }
+      }
+    }
+    @media screen and(min-width: $fullHD) {
+      .speciality-item {
+        padding-bottom: 50px;
+        padding-top: 50px;
+        height: 475px;
+        .item-title {
+          font-size: 48px;
+          margin-bottom: 50px;
+        }
+        .speciality-diversity-list li {
+          padding-left: 30px;
+          p {
+            font-size: 24px;
+          }
+        }
       }
     }
   }

@@ -15,5 +15,8 @@
         }
       }
     }
+    @media screen and(min-width: $tabletMax) {
+      padding-right: 19px;
+    }
   }
 }

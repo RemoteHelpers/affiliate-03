@@ -48,4 +48,34 @@
       }
     }
   }
+  @media screen and(min-width: $desktop) {
+    padding-top: 80px;
+    padding-bottom: 0;
+    .container {
+      height: 100%;
+      &::after {
+        top: -50px;
+        width: 230px;
+        height: 230px;
+        filter: blur(111.79px);
+      }
+      &::before {
+        width: 240px;
+        height: 660px;
+        filter: blur(121.79px);
+      }
+    }
+  }
+  @media screen and(min-width: $desktop) {
+    padding-top: 150px;
+    .container {
+      &::after {
+        right: 480px;
+        top: -120px;
+      }
+      &::before {
+        right: 480px;
+      }
+    }
+  }
 }

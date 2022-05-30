@@ -4,4 +4,11 @@
     isolation: isolate;
     position: relative;
   }
+  @media screen and(min-width: $desktop) {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+  @media screen and(min-width: $fullHD) {
+    padding-top: 60px;
+  }
 }

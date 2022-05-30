@@ -18,19 +18,24 @@ function SectionContactForm() {
     console.log(data);
   };
   return (
-    <Section className="section-contact-form">
+    <Section className="section-contact-form" id="contact-form">
       <Container className="title-container">
         <Title>Let's have a chat</Title>
       </Container>
-      <Title priority={3} className="form-title">
-        How can we contact you?
-      </Title>
-      <Form
-        className="contact-form"
-        formFields={contactFormTemplate}
-        onSubmit={handleSubmit}
-      />
+      <Container className="contact-form-container">
+        <Title priority={3} className="form-title">
+          How can we contact you?
+        </Title>
+        <Form
+          className="contact-form"
+          formFields={contactFormTemplate}
+          onSubmit={handleSubmit}
+        />
+      </Container>
       <Container className="social-link-container">
+        <Title priority={3} className="social-link-title">
+          Contacts
+        </Title>
         <List
           className="social-link-list"
           list={[

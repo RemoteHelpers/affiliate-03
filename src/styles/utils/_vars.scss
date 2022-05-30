@@ -39,44 +39,7 @@ $fullHD: 1920px;
   font-size: $fs;
   line-height: $lh;
 }
-@mixin switcher {
-  position: relative;
-  display: inline-block;
-  background-color: $accentYellow;
-  box-sizing: content-box;
-  input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-    &:checked + .slider::before {
-      transform: translateX(-26px);
-    }
-  }
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    inset: 0;
-    &::before {
-      position: absolute;
-      right: 0;
-      content: "";
-      border-radius: 50%;
-      background-color: #fff;
-      transition: ease-out 0.3s;
-    }
-  }
-}
 @mixin backgroundSwitchMobile {
-  width: 45px;
-  height: 19px;
-  border: 0.76px solid #fff;
-  box-shadow: inset 0px 1.52px 1.52px rgba(0, 0, 0, 0.25);
-  border-radius: 38px;
-  .slider::before {
-    width: 19px;
-    height: 19px;
-    box-shadow: inset 0px 1.52px 1.52px rgba(0, 0, 0, 0.25);
-  }
 }
 @mixin backgroundSwitchDesktop {
   width: 120px;

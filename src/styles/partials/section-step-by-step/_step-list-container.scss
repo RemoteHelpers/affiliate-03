@@ -79,13 +79,76 @@
       .step-list {
         .step-item {
           .item-descr-container p {
-            font-size: 18px;
+            font-size: 16px;
           }
           &:nth-child(3) p:not(:first-child)::before {
             content: "\2022";
             font-weight: 700;
             margin-right: 10px;
           }
+        }
+      }
+    }
+    @media screen and(min-width: $desktop) {
+      .step-list-title {
+        @include standartTitle(32px, 120%);
+        margin-bottom: 40px;
+      }
+      .step-list {
+        .step-item {
+          width: 23%;
+          .item-title {
+            width: 100%;
+            height: 100.78px;
+            font-size: 24px;
+          }
+          .item-descr-container {
+            display: block;
+            height: 100%;
+            p {
+              font-size: 18px;
+            }
+          }
+          &:not(:last-child) {
+            margin-right: 28px;
+          }
+          &:first-child .item-title {
+            width: 150px;
+          }
+        }
+      }
+    }
+    @media screen and(min-width: $fullHD) {
+      .step-list-title {
+        font-size: 36px;
+        margin-bottom: 50px;
+      }
+      .step-list {
+        justify-content: space-between;
+        .step-item {
+          width: 322px;
+          &:not(:last-child) {
+            margin-right: 0;
+          }
+          .item-number-container {
+            width: 62px;
+            height: 62px;
+            p {
+              padding-top: 5px;
+              font-size: 44px;
+            }
+          }
+          .item-title {
+            max-width: 222px;
+            font-size: 30px;
+          }
+          .item-descr-container p {
+            font-size: 24px;
+          }
+        }
+        .step-item:first-child .item-title {
+          max-width: none;
+          width: 70%;
         }
       }
     }

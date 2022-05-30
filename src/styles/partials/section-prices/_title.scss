@@ -20,5 +20,25 @@
         padding-left: 40px;
       }
     }
+    @media screen and(min-width: $tablet) {
+      justify-content: center;
+    }
+    @media screen and(min-width: $desktop) {
+      align-items: flex-start;
+      margin-bottom: 40px;
+      .title {
+        font-size: 60px;
+      }
+    }
+    @media screen and(min-width: $fullHD) {
+      margin-bottom: 0;
+      justify-content: space-between;
+      align-items: center;
+      .title {
+        font-size: 100px;
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
   }
 }

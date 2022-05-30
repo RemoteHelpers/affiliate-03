@@ -7,9 +7,11 @@ import stepData from "../data/stepData.json";
 function SectionStepByStep() {
   let count = 0;
   return (
-    <Section className="section-step-by-step">
+    <Section className="section-step-by-step" id="step-by-step">
       <Container className="title-container">
-        <Title>Step-by-step</Title>
+        <Title>
+          Step-by-step<span> hiring</span>
+        </Title>
       </Container>
       <Container className="step-list-container">
         <Title priority={3} className="step-list-title">

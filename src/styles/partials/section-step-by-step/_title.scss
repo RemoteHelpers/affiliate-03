@@ -5,6 +5,26 @@
       margin-bottom: 30px;
       .title {
         @include standartTitle(36px, 120%);
+        span {
+          display: none;
+        }
+      }
+    }
+    @media screen and(min-width: $mobileMax) {
+      .title span {
+        display: inline;
+      }
+    }
+    @media screen and(min-width: $desktop) {
+      margin-bottom: 40px;
+      .title {
+        font-size: 60px;
+      }
+    }
+    @media screen and(min-width: $fullHD) {
+      margin-bottom: 50px;
+      .title {
+        font-size: 100px;
       }
     }
   }

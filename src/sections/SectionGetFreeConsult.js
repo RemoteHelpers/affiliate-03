@@ -7,7 +7,7 @@ import specialityData from "../data/specialityData.json";
 
 function SectionGetFreeConsult() {
   return (
-    <Section className="section-get-consult">
+    <Section className="section-get-consult" id="get-consult">
       <Container className="title-container">
         <Title>Get free consultation</Title>
         <Arrow width={43.5} height={41} className="arrow-svg" />

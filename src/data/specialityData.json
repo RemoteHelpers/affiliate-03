@@ -27,14 +27,5 @@
       "Illustrator",
       "Video editor"
     ]
-  },
-  {
-    "speciality": "Developer",
-    "types": [
-      "Full stack developer",
-      "Frontend developer",
-      "Backend developer",
-      "QA tester"
-    ]
   }
 ]

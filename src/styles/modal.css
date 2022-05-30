@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "AbroSans-Bold";
+  src: url("../fonts/AbroSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(15px);
+}
+.modal-content-container {
+  overflow-y: scroll;
+}
+.toolbar-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.toolbar-container .logo-container {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 12px;
+}
+.toolbar-container .close-modal-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  background-color: transparent;
+}
+.modal-link-list .modal-link-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+.modal-link-list .modal-link-item .modal-link {
+  font-family: "AbroSans-Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  color: #ffffff;
+  transition: all 0.3s ease-out;
+}
+.modal-link-list .modal-link-item:hover .modal-link {
+  color: #fbbf13;
+}
+.modal-link-list .modal-link-item .modal-link.red {
+  color: #fb1515;
+}
+@media screen and (min-width: 768px) {
+  .modal-link-list .modal-link-item .modal-link {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-content-container {
+    position: absolute;
+    width: 400px;
+    min-height: 100%;
+    right: 0;
+    padding-top: 20px;
+    padding-right: 20px;
+    overflow-y: hidden;
+    background-color: black;
+  }
+  .toolbar-container {
+    margin-bottom: 80px;
+  }
+  .toolbar-container .logo-container {
+    display: none;
+  }
+  .modal-link-list .modal-link-item:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  .modal-link-list .modal-link-item .modal-link {
+    display: block;
+  }
+  .modal-link-list .modal-link-item {
+    width: fit-content;
+    padding-right: 15px;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,30 @@
+@keyframes scroll {
+  0% {
+    fill: white;
+    color: white;
+  }
+  50% {
+    fill: $accentYellow;
+    color: $accentYellow;
+  }
+  100% {
+    fill: white;
+    color: white;
+  }
+}
+.scroll-hint-container {
+  @media screen and(min-width: $mobile) {
+    display: none;
+  }
+  @media screen and(min-width: $desktop) {
+    position: absolute;
+    display: flex;
+    bottom: 20px;
+    right: 160px;
+    .scroll-hint {
+      margin-right: 15px;
+      animation: scroll 1s infinite ease-out;
+      @include standartDescription(24px, 26px);
+    }
+  }
+}

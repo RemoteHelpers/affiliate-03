@@ -11,14 +11,16 @@ import { ReactComponent as WhatsApp } from "../svg/whatsapp.svg";
 import { ReactComponent as Email } from "../svg/email.svg";
 import { ReactComponent as BurgerMenu } from "../svg/burger-menu.svg";
 
-function AppBar() {
+function AppBar({ onClick }) {
   return (
     <Section tag="header" className="header">
       <Container tag="div" className="logo-container">
-        <Logo className="logo" width={97} height={23} />
+        <Link href="/">
+          <Logo className="logo" width={97} height={23} />
+        </Link>
       </Container>
       <Container tag="div" className="support-ua-container">
-        <Button type="button" className="support-ua-btn">
+        <Button type="button" className="support-ua-btn" onClick={onClick}>
           <p>Support Ukrainians</p>
         </Button>
       </Container>
@@ -53,12 +55,14 @@ function AppBar() {
         ]}
       />
       <Container tag="div" className="get-consult-container">
-        <Button type="button" className="get-consult-btn">
-          <p>Get Free Consultation</p>
-        </Button>
+        <Link href="#contact-form">
+          <Button type="button" className="get-consult-btn" onClick={onClick}>
+            <p>Get Free Consultation</p>
+          </Button>
+        </Link>
       </Container>
       <Container tag="div" className="burger-menu-container">
-        <Button type="button" className="burger-menu-btn">
+        <Button type="button" className="burger-menu-btn" onClick={onClick}>
           <BurgerMenu className="burger-menu-svg" width={35} height={24} />
         </Button>
       </Container>

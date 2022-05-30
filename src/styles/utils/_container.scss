@@ -4,19 +4,23 @@
   }
   @media screen and (min-width: $mobileMax) {
     width: 542px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
   @media screen and (min-width: $tablet) {
-    max-width: 748px;
+    width: 748px;
   }
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tabletMax) {
     width: 962px;
   }
   @media screen and (min-width: $desktop) {
     width: 1170px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
   @media screen and (min-width: $fullHD) {
-    width: 1920px;
+    width: 1728px;
+    padding: 0;
+    padding-left: 0;
   }
 }

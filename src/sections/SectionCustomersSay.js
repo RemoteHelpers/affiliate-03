@@ -6,7 +6,7 @@ import feedbackData from "../data/feedbackData.json";
 
 function SectionCustomersSay() {
   return (
-    <Section className="section-customers-say">
+    <Section className="section-customers-say" id="customers-say">
       <Container className="title-container">
         <Title>
           What do <span>our customers say about us?</span>

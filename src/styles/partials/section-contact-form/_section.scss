@@ -2,4 +2,18 @@
   @media screen and(min-width: $mobile) {
     padding-bottom: 130px;
   }
+  @media screen and(min-width: $desktop) {
+    padding-bottom: 50px;
+    padding-top: 50px;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  @media screen and(min-width: $desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }

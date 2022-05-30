@@ -3,5 +3,25 @@
     @media screen and(min-width: $mobile) {
       display: none;
     }
+    @media screen and(min-width: $desktop) {
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-right: 2px solid white;
+      .support-ua-btn {
+        @include standartBtn(240px, 42px, $accentRed, none);
+        p {
+          font-size: 18px;
+        }
+        &:hover {
+          background-color: $accentRed;
+          border: 2px dashed white;
+        }
+        &:hover p {
+          color: white;
+        }
+      }
+    }
   }
 }

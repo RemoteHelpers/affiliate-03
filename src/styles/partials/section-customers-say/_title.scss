@@ -10,11 +10,27 @@
         }
       }
     }
-    @media screen and(min-width: $mobile) {
+    @media screen and(min-width: $mobileMax) {
+      .title span {
+        display: inline;
+      }
+    }
+    @media screen and(min-width: $tablet) {
       .title {
-        span {
-          display: inline;
-        }
+        width: 522px;
+      }
+    }
+    @media screen and(min-width: $desktop) {
+      margin-bottom: 40px;
+      .title {
+        width: 80%;
+        font-size: 60px;
+      }
+    }
+    @media screen and(min-width: $fullHD) {
+      margin-bottom: 50px;
+      .title {
+        font-size: 100px;
       }
     }
   }

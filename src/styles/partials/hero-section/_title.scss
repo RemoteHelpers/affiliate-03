@@ -21,5 +21,17 @@
     @media screen and(min-width: $tablet) {
       width: 555px;
     }
+    @media screen and(min-width: $desktop) {
+      font-size: 90px;
+      width: 100%;
+      span {
+        padding-top: 0;
+      }
+    }
+    @media screen and(min-width: $fullHD) {
+      min-width: 100%;
+      font-size: 140px;
+      margin-bottom: 50px;
+    }
   }
 }

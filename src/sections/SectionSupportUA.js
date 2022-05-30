@@ -5,11 +5,9 @@ import Title from "../components/Title";
 
 function SectionSupportUA() {
   return (
-    <Section className="section-support-ua">
+    <Section className="section-support-ua" id="support-ua">
       <Container className="title-container">
-        <Title>
-          Let`s help each other in the current situation
-        </Title>
+        <Title>Let`s help each other in the current situation</Title>
       </Container>
       <Container className="description-container">
         <p>

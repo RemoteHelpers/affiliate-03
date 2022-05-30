@@ -23,7 +23,7 @@ function SectionPrices() {
     setFullTimeMode(e.target.checked);
   };
   return (
-    <Section className="section-prices">
+    <Section className="section-prices" id="prices">
       <Container className="title-container">
         <Title className={addClass.fullTime}>Full-time</Title>
         <Switch onChange={onToggleChange} value={fullTimeMode} />

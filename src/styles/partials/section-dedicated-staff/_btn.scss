@@ -1,14 +1,22 @@
 .section-dedicated-staff {
-  .btn {
+  .btn-container {
     @media screen and(min-width: $mobile) {
-      @include standartBtn(200px, 200px, transparent, dashed white);
-      border-radius: 50%;
-      padding-top: 3px;
-      margin-left: auto;
-      margin-right: auto;
-      p {
-        @include standartDescription(24px, 120%);
+      .btn {
+        @include standartBtn(200px, 200px, transparent, dashed white);
+        border-radius: 50%;
+        padding-top: 3px;
+        margin-left: auto;
+        margin-right: auto;
+        p {
+          @include standartDescription(24px, 120%);
+        }
       }
+    }
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 }

@@ -22,5 +22,21 @@
         top: -3px;
       }
     }
+    @media screen and(min-width: $desktop) {
+      margin-bottom: 40px;
+      .title {
+        @include standartTitle(60px, 120%);
+      }
+    }
+    @media screen and(min-width: $fullHD) {
+      margin-bottom: 109px;
+      border-bottom: 2px solid white;
+      .title {
+        font-size: 100px;
+      }
+      .arrow-svg {
+        top: 30%;
+      }
+    }
   }
 }

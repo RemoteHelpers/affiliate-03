@@ -5,6 +5,7 @@
 }
 body {
   background: $blackContent;
+  overflow-x: hidden;
 }
 ul[class],
 ol[class] {
@@ -21,8 +22,12 @@ a {
 }
 
 a {
+  width: fit-content;
+  display: block;
   text-decoration: none;
   color: #fff;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 body,
@@ -102,4 +107,12 @@ h4 {
 }
 p {
   font-family: "AbroSans-Regular";
+}
+@media screen and(min-width: $desktop) {
+  body {
+    overflow-y: hidden;
+  }
+}
+.wheel-container {
+  min-height: 100%;
 }

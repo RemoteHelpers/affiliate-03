@@ -1,7 +1,7 @@
-function Section({ tag="section", className, children }) {
+function Section({ tag = "section", className, id, children }) {
   const TagName = tag;
   return (
-    <TagName className={className}>
+    <TagName id={id} className={className}>
       <div className="container">{children}</div>
     </TagName>
   );

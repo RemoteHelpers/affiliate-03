@@ -1,43 +1,85 @@
 .section-dedicated-staff {
-  .dedicated-staff-list {
-    @media screen and(min-width: $mobile) {
-      margin-bottom: 50px;
-      .dedicated-staff-item {
-        display: flex;
-        border-bottom: 2px solid #fff;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        .number-container {
-          display: block;
-          margin-right: 12px;
-          p {
-            display: block;
-            width: 25px;
-            @include standartTitle(36px, 1);
-          }
-        }
-        .description-container {
+  .content-container {
+    .dedicated-staff-list {
+      @media screen and(min-width: $mobile) {
+        margin-bottom: 50px;
+        .dedicated-staff-item {
           display: flex;
-          align-items: center;
-          p {
-            @include standartDescription(12px, 170%);
-          }
-        }
-        &:nth-child(5) {
-          .description-container {
+          border-bottom: 2px solid #fff;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          .number-container {
+            display: block;
+            margin-right: 12px;
             p {
-              width: 230px;
+              display: block;
+              width: 25px;
+              @include standartTitle(36px, 1);
+            }
+          }
+          .description-container {
+            display: flex;
+            align-items: center;
+            p {
+              @include standartDescription(12px, 170%);
+            }
+          }
+          &:nth-child(5) {
+            .description-container {
+              p {
+                width: 230px;
+              }
             }
           }
         }
       }
+      @media screen and(min-width: $mobileMax) {
+        .dedicated-staff-item {
+          &:nth-child(5) {
+            .description-container {
+              p {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      @media screen and(min-width: $tablet) {
+        .dedicated-staff-item {
+          .description-container p {
+            font-size: 16px;
+          }
+          .number-container {
+            margin-right: 20px;
+          }
+        }
+      }
     }
-    @media screen and(min-width: $mobileMax) {
-      .dedicated-staff-item {
-        &:nth-child(5) {
-          .description-container {
-            p {
-              width: 100%;
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      .dedicated-staff-list {
+        .dedicated-staff-item {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          padding-right: 40px;
+          .description-container p {
+            font-size: 18px;
+          }
+        }
+        @media screen and(min-width: $fullHD) {
+          .dedicated-staff-item {
+            width: 1142px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            padding-right: 0;
+            .number-container {
+              margin-right: 30px;
+              p {
+                font-size: 48px;
+              }
+            }
+            .description-container p {
+              font-size: 24px;
             }
           }
         }

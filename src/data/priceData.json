@@ -22,11 +22,5 @@
     "description": "Our employee is ready to create visual content, creatives, illustrations, and landing pages.",
     "fullTimePrice": 1200,
     "partTimePrice": 900
-  },
-  {
-    "title": "Developer",
-    "description": "All concerning the development of the site and its optimization is not a problem for developers.",
-    "fullTimePrice": 1400,
-    "partTimePrice": 1100
   }
 ]

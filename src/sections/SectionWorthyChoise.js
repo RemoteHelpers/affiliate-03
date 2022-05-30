@@ -6,7 +6,7 @@ import worthyData from "../data/worthyData.json";
 
 function SectionWorthyChoise() {
   return (
-    <Section className="section-worthy-choise">
+    <Section className="section-worthy-choise" id="worthy-choise">
       <Container className="title-container">
         <Title>Why are we worthy of your choice?</Title>
       </Container>

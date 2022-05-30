@@ -13,4 +13,28 @@
       padding-right: 10px;
     }
   }
+  @media screen and(min-width: $tablet) {
+    height: 70px;
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  @media screen and(min-width: $tabletMax) {
+    .container {
+      width: 962px;
+      padding-left: 0;
+      padding-right: 0;
+      justify-content: center;
+    }
+  }
+  @media screen and(min-width: $desktop) {
+    height: 80px;
+    .container {
+      width: 1170px;
+    }
+  }
+  @media screen and(min-width: $fullHD) {
+    height: 100px;
+  }
 }

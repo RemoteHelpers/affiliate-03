@@ -7,5 +7,23 @@
         @include standartTitle(36px, 120%);
       }
     }
+    @media screen and(min-width: $mobileMax) {
+      margin-bottom: 40px;
+    }
+    @media screen and(min-width: $tablet) {
+      margin-bottom: 50px;
+    }
+    @media screen and(min-width: $desktop) {
+      .title {
+        width: 710px;
+        font-size: 60px;
+      }
+    }
+    @media screen and(min-width: $fullHD) {
+      .title {
+        width: 1051px;
+        font-size: 100px;
+      }
+    }
   }
 }
