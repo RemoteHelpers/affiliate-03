@@ -116,3 +116,18 @@ p {
 .wheel-container {
   min-height: 100%;
 }
+@keyframes section {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+section {
+  @media screen and(min-width: $desktop) {
+    animation: section 0.3s ease-out;
+  }
+}

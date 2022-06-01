@@ -1,3 +1,4 @@
+import { memo } from "react";
 import AppBar from "./sections/AppBar";
 
 function MobileSite({ sections }) {
@@ -11,4 +12,4 @@ function MobileSite({ sections }) {
   );
 }
 
-export default MobileSite;
+export default memo(MobileSite);

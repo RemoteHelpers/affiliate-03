@@ -10,37 +10,17 @@ export const btnContext = createContext();
 function App() {
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
-  const [btnClick, setBtnClick] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
-  const [selector, setSelector] = useState(0);
   const [currentSection, setCurrentSection] = useState(0);
 
-  const handleBtnClick = e => {
-    e.preventDefault();
-    switch (e.currentTarget.classList[0]) {
-      case "support-ua-btn":
-        setBtnClick("support-ua-btn");
-        break;
-      case "burger-menu-btn":
-        setBtnClick("burger-menu-btn");
-        break;
-      default:
-        setBtnClick("get-consult-btn");
-    }
-  };
-  const handleBtnChange = query => setBtnClick(query);
-  const handleSelector = selector => setSelector(selector);
+  const handleSelector = selector => setCurrentSection(selector);
   const handleSectionScroll = section => setCurrentSection(section);
+  const handleToggleModal = () => setModalOpen(!modalOpen);
 
   useEffect(() => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
   }, []);
-
-  useEffect(() => {
-    if (btnClick === "burger-menu-btn") setModalOpen(true);
-    if (btnClick === "close-modal-btn") setModalOpen(false);
-  }, [btnClick]);
 
   useEffect(
     useCallback(() => {
@@ -57,23 +37,17 @@ function App() {
   return (
     <btnContext.Provider
       value={{
-        handleBtnChange,
         handleSelector,
         handleSectionScroll,
+        handleToggleModal,
       }}
     >
       {1200 > width ? (
         <MobileSite sections={sectionsAll} />
       ) : (
-        <Slider
-          height={height}
-          btnClick={btnClick}
-          selector={selector}
-          index={currentSection}
-          onClick={handleBtnClick}
-        />
+        <Slider height={height} index={currentSection} />
       )}
-      {modalOpen && <ModalMenu width={width} />}
+      {modalOpen && <ModalMenu />}
     </btnContext.Provider>
   );
 }

@@ -9,10 +9,8 @@ import dedicatedStaffData from "../data/dedicatedStaffData.json";
 import { btnContext } from "../App";
 
 function SectionDedicatedStaff() {
-  const { handleBtnChange } = useContext(btnContext);
+  const { handleSelector } = useContext(btnContext);
   let count = 0;
-
-  const handleLinkClick = () => handleBtnChange("get-consult-btn");
 
   return (
     <Section className="section-dedicated-staff" id="dedicated-staff">
@@ -36,8 +34,8 @@ function SectionDedicatedStaff() {
           ]}
         />
         <Container className="btn-container">
-          <Link href="#contact-form">
-            <Button onClick={handleLinkClick}>
+          <Link href="#contact-form" onClick={() => handleSelector(8)}>
+            <Button>
               <p>Contact Us</p>
             </Button>
           </Link>

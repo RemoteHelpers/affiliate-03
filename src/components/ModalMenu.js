@@ -7,27 +7,27 @@ import { ReactComponent as CloseModal } from "../svg/close-modal.svg";
 import "../styles/modal.css";
 
 function ModalMenu() {
-  const { handleBtnChange, handleSelector } = useContext(btnContext);
+  const { handleToggleModal, handleSelector } = useContext(btnContext);
 
-  const handleBtnClick = () => {
-    handleBtnChange("close-modal-btn");
-  };
   const handleLinkClick = e => {
     const { index } = e.currentTarget.dataset;
     handleSelector(Number(index));
-    handleBtnChange("close-modal-btn");
+    handleToggleModal();
   };
   const handleBackdropClick = e => {
-    if (e.target.className === "backdrop") handleBtnChange("close-modal-btn");
+    if (e.target.className === "backdrop") handleToggleModal();
   };
   return createPortal(
     <div className="backdrop" onClick={handleBackdropClick}>
       <div className="modal-content-container" id="modal">
         <div className="toolbar-container">
-          <div className="logo-container" onClick={handleBtnClick}>
+          <div className="logo-container" onClick={() => handleToggleModal()}>
             <Logo className="logo" width={97} height={23} />
           </div>
-          <button className="close-modal-btn" onClick={handleBtnClick}>
+          <button
+            className="close-modal-btn"
+            onClick={() => handleToggleModal()}
+          >
             <CloseModal className="close-modal-icon" />
           </button>
         </div>

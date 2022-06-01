@@ -7,9 +7,7 @@ import ScrollHint from "../components/ScrollHint";
 import { btnContext } from "../App";
 
 function HeroSection() {
-  const { handleBtnChange } = useContext(btnContext);
-
-  const handleLinkClick = () => handleBtnChange("get-consult-btn");
+  const { handleSelector } = useContext(btnContext);
 
   return (
     <>
@@ -17,8 +15,8 @@ function HeroSection() {
         <Title priority={1} className="hero-title">
           Find Remote Virtual<span> Employee</span>
         </Title>
-        <Link href="#contact-form">
-          <Button className="hero-btn" onClick={handleLinkClick}>
+        <Link href="#contact-form" onClick={() => handleSelector(8)}>
+          <Button className="hero-btn">
             <p>Contact Us</p>
           </Button>
         </Link>

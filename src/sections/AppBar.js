@@ -1,8 +1,10 @@
+import { useContext } from "react";
 import Section from "../components/Section";
 import Container from "../components/Container";
 import Button from "../components/Button";
 import List from "../components/List";
 import Link from "../components/Link";
+import { btnContext } from "../App";
 import { ReactComponent as Logo } from "../svg/logo-hover.svg";
 import { ReactComponent as Skype } from "../svg/skype.svg";
 import { ReactComponent as Telegram } from "../svg/telegram.svg";
@@ -11,7 +13,13 @@ import { ReactComponent as WhatsApp } from "../svg/whatsapp.svg";
 import { ReactComponent as Email } from "../svg/email.svg";
 import { ReactComponent as BurgerMenu } from "../svg/burger-menu.svg";
 
-function AppBar({ onClick }) {
+function AppBar() {
+  const { handleToggleModal, handleSelector } = useContext(btnContext);
+
+  const handleLinkClick = e => {
+    const { index } = e.currentTarget.dataset;
+    handleSelector(Number(index));
+  };
   return (
     <Section tag="header" className="header">
       <Container tag="div" className="logo-container">
@@ -20,9 +28,11 @@ function AppBar({ onClick }) {
         </Link>
       </Container>
       <Container tag="div" className="support-ua-container">
-        <Button type="button" className="support-ua-btn" onClick={onClick}>
-          <p>Support Ukrainians</p>
-        </Button>
+        <Link href="#support-ua" dataIndex={1} onClick={handleLinkClick}>
+          <Button type="button" className="support-ua-btn">
+            <p>Support Ukrainians</p>
+          </Button>
+        </Link>
       </Container>
       <List
         className="social-link-list"
@@ -55,14 +65,18 @@ function AppBar({ onClick }) {
         ]}
       />
       <Container tag="div" className="get-consult-container">
-        <Link href="#contact-form">
-          <Button type="button" className="get-consult-btn" onClick={onClick}>
+        <Link href="#contact-form" dataIndex={8} onClick={handleLinkClick}>
+          <Button type="button" className="get-consult-btn">
             <p>Get Free Consultation</p>
           </Button>
         </Link>
       </Container>
       <Container tag="div" className="burger-menu-container">
-        <Button type="button" className="burger-menu-btn" onClick={onClick}>
+        <Button
+          type="button"
+          className="burger-menu-btn"
+          onClick={() => handleToggleModal()}
+        >
           <BurgerMenu className="burger-menu-svg" width={35} height={24} />
         </Button>
       </Container>
