@@ -21,7 +21,15 @@
     @media screen and(min-width: $tablet) {
       width: 555px;
     }
-    @media screen and(min-width: $desktop) {
+    @media screen and(min-width: $desktop) and(max-height: 832px) {
+      width: 100%;
+      font-size: 75px;
+      span {
+        padding-top: 0;
+      }
+      margin-bottom: 30px;
+    }
+    @media screen and(min-width: $desktop) and(min-height: 833px) {
       font-size: 90px;
       width: 100%;
       span {

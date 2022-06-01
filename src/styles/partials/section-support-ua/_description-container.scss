@@ -22,7 +22,7 @@
       p {
         padding-right: 0;
         padding-left: 0;
-        font-size: 18px;
+        font-size: min(18px, 2vh);
       }
     }
     @media screen and(min-width: $fullHD) {

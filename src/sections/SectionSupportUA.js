@@ -7,7 +7,9 @@ function SectionSupportUA() {
   return (
     <Section className="section-support-ua" id="support-ua">
       <Container className="title-container">
-        <Title>Let`s help each other in the current situation</Title>
+        <Title>
+          Let`s help each other <span>in the current situation</span>
+        </Title>
       </Container>
       <Container className="description-container">
         <p>

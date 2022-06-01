@@ -14,9 +14,12 @@
       margin-bottom: 50px;
     }
     @media screen and(min-width: $desktop) {
+      margin-bottom: 7vh;
       .title {
-        width: 710px;
-        font-size: 60px;
+        font-size: min(60px, 7vh);
+        @media screen and(min-height: 808px) {
+          width: 75%;
+        }
       }
     }
     @media screen and(min-width: $fullHD) {

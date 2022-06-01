@@ -7,7 +7,7 @@
       }
       .social-link-list {
         .social-link-item {
-          margin-bottom: 30px;
+          margin-bottom: 3vh;
           a {
             display: flex;
             align-items: center;
@@ -35,7 +35,7 @@
       }
     }
     @media screen and(min-width: $desktop) {
-      width: 38%;
+      width: 27%;
       .social-link-title {
         font-size: 32px;
       }

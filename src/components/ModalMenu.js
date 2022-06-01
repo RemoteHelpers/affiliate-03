@@ -20,7 +20,6 @@ function ModalMenu() {
   const handleBackdropClick = e => {
     if (e.target.className === "backdrop") handleBtnChange("close-modal-btn");
   };
-
   return createPortal(
     <div className="backdrop" onClick={handleBackdropClick}>
       <div className="modal-content-container" id="modal">

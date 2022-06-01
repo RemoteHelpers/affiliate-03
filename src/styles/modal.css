@@ -12,28 +12,21 @@
   background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(15px);
 }
-.modal-content-container {
-  overflow-y: scroll;
-}
 .toolbar-container {
+  width: 100vw;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
+  padding: 1em;
 }
 .toolbar-container .logo-container {
   width: fit-content;
   display: flex;
   align-items: center;
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-top: 12px;
 }
 .toolbar-container .close-modal-btn {
-  position: absolute;
-  right: 15px;
-  top: 10px;
   background-color: transparent;
 }
 .modal-link-list .modal-link-item:not(:last-child) {
@@ -44,12 +37,14 @@
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
+  text-align: center;
   line-height: 120%;
   color: #ffffff;
   transition: all 0.3s ease-out;
 }
 .modal-link-list .modal-link-item:hover .modal-link {
   color: #fbbf13;
+  cursor: pointer;
 }
 .modal-link-list .modal-link-item .modal-link.red {
   color: #fb1515;
@@ -71,13 +66,16 @@
     background-color: black;
   }
   .toolbar-container {
-    margin-bottom: 80px;
+    width: 100%;
+    margin-bottom: 4vh;
+    padding-right: 0;
+    justify-content: end;
   }
   .toolbar-container .logo-container {
     display: none;
   }
   .modal-link-list .modal-link-item:not(:last-child) {
-    margin-bottom: 50px;
+    margin-bottom: 4vh;
   }
   .modal-link-list .modal-link-item .modal-link {
     display: block;

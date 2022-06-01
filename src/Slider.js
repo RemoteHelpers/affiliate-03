@@ -1,67 +1,57 @@
-import { useState, useContext, useEffect } from "react";
+import { useContext, useEffect, useCallback, memo } from "react";
 import { btnContext } from "./App";
-import HeroSection from "./sections/HeroSection";
-import SectionStepByStep from "./sections/SectionStepByStep";
-import SectionGetFreeConsult from "./sections/SectionGetFreeConsult";
-import SectionWorthyChoise from "./sections/SectionWorthyChoise";
-import SectionDedicatedStaff from "./sections/SectionDedicatedStaff";
-import SectionPrices from "./sections/SectionPrices";
-import SectionCustomersSay from "./sections/SectionCustomersSay";
-import SectionContactForm from "./sections/SectionContactForm";
-import SectionSupportUA from "./sections/SectionSupportUA";
-import Footer from "./sections/Footer";
+import AppBar from "./sections/AppBar";
+import { sectionsAll } from "./data/sectionsData";
 
-const items = [
-  <HeroSection />,
-  <SectionStepByStep />,
-  <SectionGetFreeConsult />,
-  <SectionWorthyChoise />,
-  <SectionDedicatedStaff />,
-  <SectionPrices />,
-  <SectionCustomersSay />,
-  <>
-    <SectionContactForm />
-    <Footer />
-  </>,
-];
+function Slider({ height, btnClick, selector, index, onClick }) {
+  const { handleBtnChange, handleSectionScroll } = useContext(btnContext);
+  window.location.hash = sectionsAll[index].id;
 
-function Slider({ height, btnClick, selector }) {
-  const [index, setIndex] = useState(0);
-  const { handleBtnChange } = useContext(btnContext);
+  const scrollHandler = useCallback(
+    e => {
+      if (btnClick) handleBtnChange("");
+      if (e.deltaY === 100) {
+        if (index === sectionsAll.length - 1) return;
+        handleSectionScroll(index + 1);
+      } else {
+        if (index === 0) return;
+        handleSectionScroll(index - 1);
+      }
+    },
+    [btnClick, index],
+  );
 
-  const scrollHandler = e => {
-    if (btnClick) handleBtnChange("");
-    if (e.deltaY === 100) {
-      if (index === items.length - 1) return;
-      setIndex(index + 1);
-    } else {
-      if (index === 0) return;
-      setIndex(index - 1);
-    }
-  };
-
-  useEffect(() => {
-    if (selector === -1) {
-      handleBtnChange("support-ua-btn");
-    } else {
-      setIndex(selector);
-    }
-  }, [selector]);
-  useEffect(() => {
-    if (btnClick === "get-consult-btn") setIndex(items.length - 1);
-  }, [btnClick]);
-
-  if (btnClick === "support-ua-btn")
-    return (
-      <div style={{ height: height }} onWheel={scrollHandler}>
-        {btnClick === "support-ua-btn" && <SectionSupportUA />}
-      </div>
-    );
+  useEffect(
+    useCallback(() => {
+      if (selector === -1) {
+        handleBtnChange("support-ua-btn");
+      } else {
+        handleSectionScroll(selector);
+      }
+    }, [selector]),
+    [selector],
+  );
+  useEffect(
+    useCallback(() => {
+      if (btnClick === "get-consult-btn") {
+        handleSectionScroll(sectionsAll.length - 1);
+      }
+      if (btnClick === "support-ua-btn") {
+        handleSectionScroll(1);
+      }
+    }, [btnClick]),
+    [btnClick],
+  );
   return (
-    <div style={{ height: height }} onWheel={scrollHandler}>
-      {items[index]}
+    <div
+      style={{ height: height }}
+      onWheel={scrollHandler}
+      className="slider-container"
+    >
+      <AppBar onClick={onClick} />
+      {sectionsAll[index].section}
     </div>
   );
 }
 
-export default Slider;
+export default memo(Slider);

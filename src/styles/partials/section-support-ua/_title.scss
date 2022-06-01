@@ -9,9 +9,14 @@
     }
     @media screen and(min-width: $desktop) {
       width: 100%;
-      margin-bottom: 40px;
+      margin-bottom: 4vh;
       .title {
-        font-size: 60px;
+        font-size: min(60px, 7vh);
+        @media screen and(min-height: 641px) {
+          span {
+            display: block;
+          }
+        }
       }
     }
     @media screen and(min-width: $fullHD) {

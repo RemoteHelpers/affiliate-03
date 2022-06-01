@@ -5,7 +5,7 @@
       justify-content: space-between;
       margin-bottom: 15px;
       .title {
-        @include standartTitle(24px, 120%);
+        @include standartTitle(24px, 1);
         text-transform: uppercase;
         color: #fff;
         &.is-active {
@@ -24,10 +24,10 @@
       justify-content: center;
     }
     @media screen and(min-width: $desktop) {
-      align-items: flex-start;
-      margin-bottom: 40px;
+      align-items: center;
+      margin-bottom: 4vh;
       .title {
-        font-size: 60px;
+        font-size: min(60px, 7vh);
       }
     }
     @media screen and(min-width: $fullHD) {

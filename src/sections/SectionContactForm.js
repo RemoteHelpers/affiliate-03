@@ -40,31 +40,31 @@ function SectionContactForm() {
           className="social-link-list"
           list={[
             <li className="social-link-item" key="social-link-skype">
-              <a href="https://join.skype.com/invite/gdwXqMoD0kYo">
+              <a>
                 <Skype className="skype-svg" width={40} height={40} />
                 <p>youisrael</p>
               </a>
             </li>,
             <li className="social-link-item" key="social-link-telegram">
-              <a href="#">
+              <a>
                 <Telegram className="telegram-svg" width={40} height={40} />
                 <p>@nikokardc</p>
               </a>
             </li>,
             <li className="social-link-item" key="social-link-email">
-              <a href="#">
+              <a>
                 <Email className="email-svg" width={40} height={40} />
                 <p>@sales@rh-s.com</p>
               </a>
             </li>,
             <li className="social-link-item" key="social-link-viber">
-              <a href="#">
+              <a>
                 <Viber className="viber-svg" width={40} height={40} />
                 <p>+38 099 710 10 33</p>
               </a>
             </li>,
             <li className="social-link-item" key="social-link-whatsapp">
-              <a href="#">
+              <a>
                 <WhatsApp className="whatsapp-svg" width={40} height={40} />
                 <p>+97 250 901 4509</p>
               </a>

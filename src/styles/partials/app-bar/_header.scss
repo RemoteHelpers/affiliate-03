@@ -29,7 +29,7 @@
     }
   }
   @media screen and(min-width: $desktop) {
-    height: 80px;
+    height: min(100px, 10vh);
     .container {
       width: 1170px;
     }

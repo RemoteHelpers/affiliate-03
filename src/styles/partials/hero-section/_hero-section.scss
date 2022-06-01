@@ -5,6 +5,8 @@
     .container {
       position: relative;
       isolation: isolate;
+      margin-right: auto;
+      margin-left: auto;
       &::after {
         content: "";
         position: absolute;
@@ -49,7 +51,7 @@
     }
   }
   @media screen and(min-width: $desktop) {
-    padding-top: 80px;
+    padding-top: 10vh;
     padding-bottom: 0;
     .container {
       height: 100%;
@@ -66,7 +68,7 @@
       }
     }
   }
-  @media screen and(min-width: $desktop) {
+  @media screen and(min-width: $fullHD) {
     padding-top: 150px;
     .container {
       &::after {

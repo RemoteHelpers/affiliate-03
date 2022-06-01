@@ -1,18 +1,9 @@
-import React, { useEffect, useState, createContext } from "react";
+import React, { useEffect, useState, useCallback, createContext } from "react";
 import debounce from "lodash/debounce";
-import AppBar from "./sections/AppBar";
-import HeroSection from "./sections/HeroSection";
-import SectionSupportUA from "./sections/SectionSupportUA";
-import SectionStepByStep from "./sections/SectionStepByStep";
-import SectionGetFreeConsult from "./sections/SectionGetFreeConsult";
-import SectionWorthyChoise from "./sections/SectionWorthyChoise";
-import SectionDedicatedStaff from "./sections/SectionDedicatedStaff";
-import SectionPrices from "./sections/SectionPrices";
-import SectionCustomersSay from "./sections/SectionCustomersSay";
-import SectionContactForm from "./sections/SectionContactForm";
-import Footer from "./sections/Footer";
+import { sectionsAll } from "./data/sectionsData";
 import ModalMenu from "./components/ModalMenu";
 import Slider from "./Slider";
+import MobileSite from "./MobileSite";
 
 export const btnContext = createContext();
 
@@ -22,8 +13,10 @@ function App() {
   const [btnClick, setBtnClick] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
   const [selector, setSelector] = useState(0);
+  const [currentSection, setCurrentSection] = useState(0);
 
   const handleBtnClick = e => {
+    e.preventDefault();
     switch (e.currentTarget.classList[0]) {
       case "support-ua-btn":
         setBtnClick("support-ua-btn");
@@ -37,44 +30,50 @@ function App() {
   };
   const handleBtnChange = query => setBtnClick(query);
   const handleSelector = selector => setSelector(selector);
+  const handleSectionScroll = section => setCurrentSection(section);
 
   useEffect(() => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
   }, []);
+
   useEffect(() => {
     if (btnClick === "burger-menu-btn") setModalOpen(true);
     if (btnClick === "close-modal-btn") setModalOpen(false);
   }, [btnClick]);
-  useEffect(() => {
-    window.addEventListener(
-      "resize",
-      debounce(e => {
-        setWidth(e.target.innerWidth);
-        setHeight(e.target.innerHeight);
-      }, 1000),
-    );
-  }, [width]);
+
+  useEffect(
+    useCallback(() => {
+      window.addEventListener(
+        "resize",
+        debounce(e => {
+          setWidth(e.target.innerWidth);
+          setHeight(e.target.innerHeight);
+        }, 1000),
+      );
+    }, [width, height]),
+    [],
+  );
   return (
-    <btnContext.Provider value={{ handleBtnChange, handleSelector }}>
-      <AppBar onClick={handleBtnClick} />
+    <btnContext.Provider
+      value={{
+        handleBtnChange,
+        handleSelector,
+        handleSectionScroll,
+      }}
+    >
       {1200 > width ? (
-        <>
-          <HeroSection />
-          <SectionSupportUA />
-          <SectionStepByStep />
-          <SectionGetFreeConsult />
-          <SectionWorthyChoise />
-          <SectionDedicatedStaff />
-          <SectionPrices />
-          <SectionCustomersSay />
-          <SectionContactForm />
-          <Footer />
-        </>
+        <MobileSite sections={sectionsAll} />
       ) : (
-        <Slider height={height} btnClick={btnClick} selector={selector} />
+        <Slider
+          height={height}
+          btnClick={btnClick}
+          selector={selector}
+          index={currentSection}
+          onClick={handleBtnClick}
+        />
       )}
-      {modalOpen && <ModalMenu />}
+      {modalOpen && <ModalMenu width={width} />}
     </btnContext.Provider>
   );
 }

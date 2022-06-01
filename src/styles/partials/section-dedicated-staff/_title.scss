@@ -8,7 +8,7 @@
     }
     @media screen and(min-width: $desktop) {
       .title {
-        font-size: 60px;
+        font-size: min(60px, 7vh);
       }
     }
     @media screen and(min-width: $fullHD) {
