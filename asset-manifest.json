@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/affiliate-03/static/css/main.6d8571e6.css",
-    "main.js": "/affiliate-03/static/js/main.75bd3696.js",
+    "main.css": "/affiliate-03/static/css/main.55b2839e.css",
+    "main.js": "/affiliate-03/static/js/main.6ab5c059.js",
     "static/media/AbroSans-Regular.ttf": "/affiliate-03/static/media/AbroSans-Regular.73b0e0893a9d0333a36e.ttf",
     "static/media/AbroSans-Bold.ttf": "/affiliate-03/static/media/AbroSans-Bold.42f139025321fc2c5b7e.ttf",
     "static/media/number-wrapper.svg": "/affiliate-03/static/media/number-wrapper.c21b0180d73c7e1246d5.svg",
@@ -16,11 +16,11 @@
     "static/media/burger-menu.svg": "/affiliate-03/static/media/burger-menu.0f9e808dbfb63fd978bea77543c9585c.svg",
     "static/media/arrow.svg": "/affiliate-03/static/media/arrow.2dc3ce4fb6ce44e21596d72e3d4db0d3.svg",
     "static/media/close-modal.svg": "/affiliate-03/static/media/close-modal.ff4c9e214c7235845f33f672cd7bb998.svg",
-    "main.6d8571e6.css.map": "/affiliate-03/static/css/main.6d8571e6.css.map",
-    "main.75bd3696.js.map": "/affiliate-03/static/js/main.75bd3696.js.map"
+    "main.55b2839e.css.map": "/affiliate-03/static/css/main.55b2839e.css.map",
+    "main.6ab5c059.js.map": "/affiliate-03/static/js/main.6ab5c059.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d8571e6.css",
-    "static/js/main.75bd3696.js"
+    "static/css/main.55b2839e.css",
+    "static/js/main.6ab5c059.js"
   ]
 }
