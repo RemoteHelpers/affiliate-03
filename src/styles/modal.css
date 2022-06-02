@@ -14,11 +14,14 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transform: translateX(100%);
+  transition: all 0.3s ease-out;
 }
 .backdrop.is-active {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  transform: translateX(0);
 }
 .toolbar-container {
   width: 100vw;
