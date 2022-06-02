@@ -1,12 +1,13 @@
 import { createPortal } from "react-dom";
 import { useContext } from "react";
 import { btnContext } from "../App";
+import { Link } from "react-scroll/modules";
 import modalMenuData from "../data/modalMenuData.json";
 import { ReactComponent as Logo } from "../svg/logo-hover.svg";
 import { ReactComponent as CloseModal } from "../svg/close-modal.svg";
 import "../styles/modal.css";
 
-function ModalMenu() {
+function ModalMenu({ className, width }) {
   const { handleToggleModal, handleSelector } = useContext(btnContext);
 
   const handleLinkClick = e => {
@@ -15,10 +16,10 @@ function ModalMenu() {
     handleToggleModal();
   };
   const handleBackdropClick = e => {
-    if (e.target.className === "backdrop") handleToggleModal();
+    if (e.target.className === "backdrop is-active") handleToggleModal();
   };
   return createPortal(
-    <div className="backdrop" onClick={handleBackdropClick}>
+    <div className={className} onClick={handleBackdropClick}>
       <div className="modal-content-container" id="modal">
         <div className="toolbar-container">
           <div className="logo-container" onClick={() => handleToggleModal()}>
@@ -32,18 +33,33 @@ function ModalMenu() {
           </button>
         </div>
         <ul className="modal-link-list">
-          {modalMenuData.map(({ className, link, linkTitle, dataIndex }) => (
-            <li key={link} className="modal-link-item">
-              <a
-                href={link}
-                className={className}
-                onClick={handleLinkClick}
-                data-index={dataIndex}
-              >
-                {linkTitle}
-              </a>
-            </li>
-          ))}
+          {width <= 1200
+            ? modalMenuData.map(({ className, link, linkTitle, dataIndex }) => (
+                <li key={link} className="modal-link-item">
+                  <Link
+                    className={className}
+                    onClick={handleLinkClick}
+                    data-index={dataIndex}
+                    to={link}
+                    spy={true}
+                    smooth={true}
+                    duration={!dataIndex ? 300 : Number(`${dataIndex * 2}00`)}
+                  >
+                    {linkTitle}
+                  </Link>
+                </li>
+              ))
+            : modalMenuData.map(({ className, linkTitle, dataIndex }) => (
+                <li key={linkTitle} className="modal-link-item">
+                  <p
+                    className={className}
+                    onClick={handleLinkClick}
+                    data-index={dataIndex}
+                  >
+                    {linkTitle}
+                  </p>
+                </li>
+              ))}
         </ul>
       </div>
     </div>,

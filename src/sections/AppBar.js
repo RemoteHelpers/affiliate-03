@@ -1,9 +1,9 @@
 import { useContext } from "react";
+import { Link } from "react-scroll/modules";
 import Section from "../components/Section";
 import Container from "../components/Container";
 import Button from "../components/Button";
 import List from "../components/List";
-import Link from "../components/Link";
 import { btnContext } from "../App";
 import { ReactComponent as Logo } from "../svg/logo-hover.svg";
 import { ReactComponent as Skype } from "../svg/skype.svg";
@@ -23,49 +23,56 @@ function AppBar() {
   return (
     <Section tag="header" className="header">
       <Container tag="div" className="logo-container">
-        <Link href="/">
+        <a href="/">
           <Logo className="logo" width={97} height={23} />
-        </Link>
+        </a>
       </Container>
       <Container tag="div" className="support-ua-container">
-        <Link href="#support-ua" dataIndex={1} onClick={handleLinkClick}>
+        <a href="#support-ua" data-index={1} onClick={handleLinkClick}>
           <Button type="button" className="support-ua-btn">
             <p>Support Ukrainians</p>
           </Button>
-        </Link>
+        </a>
       </Container>
       <List
         className="social-link-list"
         list={[
           <li key="app-bar-skype" className="social-link-item">
-            <Link>
+            <a>
               <Skype className="skype-svg" width={40} height={40} />
-            </Link>
+            </a>
           </li>,
           <li key="app-bar-telegram" className="social-link-item">
-            <Link>
+            <a>
               <Telegram className="telegram-svg" width={40} height={40} />
-            </Link>
+            </a>
           </li>,
           <li key="app-bar-viber" className="social-link-item">
-            <Link>
+            <a>
               <Viber className="viber-svg" width={40} height={40} />
-            </Link>
+            </a>
           </li>,
           <li key="app-bar-whatsapp" className="social-link-item">
-            <Link>
+            <a>
               <WhatsApp className="whatsapp-svg" width={40} height={40} />
-            </Link>
+            </a>
           </li>,
           <li key="app-bar-email" className="social-link-item">
-            <Link>
+            <a>
               <Email className="email-svg" width={40} height={40} />
-            </Link>
+            </a>
           </li>,
         ]}
       />
       <Container tag="div" className="get-consult-container">
-        <Link href="#contact-form" dataIndex={8} onClick={handleLinkClick}>
+        <Link
+          to="contact-form"
+          data-index={8}
+          onClick={handleLinkClick}
+          spy={true}
+          smooth={true}
+          duration={1600}
+        >
           <Button type="button" className="get-consult-btn">
             <p>Get Free Consultation</p>
           </Button>

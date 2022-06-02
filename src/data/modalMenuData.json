@@ -1,48 +1,48 @@
 [
   {
-    "link": "#home",
+    "link": "home",
     "linkTitle": "Home",
     "className": "modal-link",
     "dataIndex": 0
   },
   {
-    "link": "#support-ua",
+    "link": "support-ua",
     "linkTitle": "Support Ukrainians",
     "className": "modal-link red",
     "dataIndex": 1
   },
   {
-    "link": "#step-by-step",
+    "link": "step-by-step",
     "linkTitle": "Process of Hiring",
     "className": "modal-link",
     "dataIndex": 2
   },
   {
-    "link": "#get-consult",
+    "link": "get-consult",
     "linkTitle": "Departments",
     "className": "modal-link",
     "dataIndex": 3
   },
   {
-    "link": "#worthy-choise",
+    "link": "worthy-choise",
     "linkTitle": "Benefits",
     "className": "modal-link",
     "dataIndex": 4
   },
   {
-    "link": "#prices",
+    "link": "prices",
     "linkTitle": "Prices",
     "className": "modal-link",
     "dataIndex": 6
   },
   {
-    "link": "#customers-say",
+    "link": "customers-say",
     "linkTitle": "Testimonials",
     "className": "modal-link",
     "dataIndex": 7
   },
   {
-    "link": "#contact-form",
+    "link": "contact-form",
     "linkTitle": "Contact Us",
     "className": "modal-link",
     "dataIndex": 8

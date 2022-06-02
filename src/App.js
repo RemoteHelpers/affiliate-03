@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback, createContext } from "react";
 import debounce from "lodash/debounce";
+import classNames from "classnames";
 import { sectionsAll } from "./data/sectionsData";
 import ModalMenu from "./components/ModalMenu";
 import Slider from "./Slider";
@@ -17,11 +18,15 @@ function App() {
   const handleSectionScroll = section => setCurrentSection(section);
   const handleToggleModal = () => setModalOpen(!modalOpen);
 
+  const modalClassName = classNames({
+    "backdrop is-active": modalOpen,
+    backdrop: !modalOpen,
+  });
+
   useEffect(() => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
   }, []);
-
   useEffect(
     useCallback(() => {
       window.addEventListener(
@@ -34,6 +39,7 @@ function App() {
     }, [width, height]),
     [],
   );
+
   return (
     <btnContext.Provider
       value={{
@@ -47,7 +53,7 @@ function App() {
       ) : (
         <Slider height={height} index={currentSection} />
       )}
-      {modalOpen && <ModalMenu />}
+      {<ModalMenu className={modalClassName} width={width} />}
     </btnContext.Provider>
   );
 }

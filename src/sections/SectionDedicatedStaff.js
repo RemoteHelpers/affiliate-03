@@ -4,7 +4,7 @@ import Container from "../components/Container";
 import Title from "../components/Title";
 import List from "../components/List";
 import Button from "../components/Button";
-import Link from "../components/Link";
+import { Link } from "react-scroll/modules";
 import dedicatedStaffData from "../data/dedicatedStaffData.json";
 import { btnContext } from "../App";
 
@@ -34,7 +34,13 @@ function SectionDedicatedStaff() {
           ]}
         />
         <Container className="btn-container">
-          <Link href="#contact-form" onClick={() => handleSelector(8)}>
+          <Link
+            to="contact-form"
+            spy={true}
+            smooth={true}
+            duration={600}
+            onClick={() => handleSelector(8)}
+          >
             <Button>
               <p>Contact Us</p>
             </Button>
