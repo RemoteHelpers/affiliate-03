@@ -60,6 +60,12 @@
 .modal-link-list .modal-link-item .modal-link.red {
   color: #fb1515;
 }
+.close-modal-icon * {
+  transition: 0.3s ease-out;
+}
+.close-modal-btn:hover .close-modal-icon * {
+  fill: #fb1515;
+}
 @media screen and (min-width: 768px) {
   .modal-link-list .modal-link-item .modal-link {
     font-size: 24px;

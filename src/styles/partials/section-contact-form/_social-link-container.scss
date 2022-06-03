@@ -13,7 +13,7 @@
             align-items: center;
             margin-left: unset;
             p {
-              @include standartTitle(24px, 120%);
+              @include standartDescription(24px, 120%);
               display: block;
               line-height: 1;
               margin-left: 15px;

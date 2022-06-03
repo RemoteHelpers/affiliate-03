@@ -37,29 +37,19 @@ function AppBar() {
       <List
         className="social-link-list"
         list={[
-          <li key="app-bar-skype" className="social-link-item">
-            <a>
-              <Skype className="skype-svg" width={40} height={40} />
-            </a>
-          </li>,
-          <li key="app-bar-telegram" className="social-link-item">
-            <a>
-              <Telegram className="telegram-svg" width={40} height={40} />
-            </a>
-          </li>,
           <li key="app-bar-viber" className="social-link-item">
-            <a>
-              <Viber className="viber-svg" width={40} height={40} />
-            </a>
-          </li>,
-          <li key="app-bar-whatsapp" className="social-link-item">
-            <a>
-              <WhatsApp className="whatsapp-svg" width={40} height={40} />
+            <a href="mailto:sales@rh-s.com">
+              <Email className="email-svg" width={40} height={40} />
             </a>
           </li>,
           <li key="app-bar-email" className="social-link-item">
-            <a>
+            <a href="mailto:finance@rh-s.com">
               <Email className="email-svg" width={40} height={40} />
+            </a>
+          </li>,
+          <li key="app-bar-whatsapp" className="social-link-item">
+            <a href="https://api.whatsapp.com/send?phone=380666146468">
+              <WhatsApp className="whatsapp-svg" width={40} height={40} />
             </a>
           </li>,
         ]}

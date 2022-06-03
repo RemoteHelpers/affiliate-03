@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import Section from "../components/Section";
 import Container from "../components/Container";
 import Button from "../components/Button";
 import Title from "../components/Title";
+import { Link } from "react-scroll/modules";
+import { btnContext } from "../App";
 
 function SectionSupportUA() {
+  const { handleSelector } = useContext(btnContext);
+
   return (
     <Section className="section-support-ua" id="support-ua">
       <Container className="title-container">
@@ -31,9 +36,17 @@ function SectionSupportUA() {
           us is the right option if you intend to join this mission and help.
         </p>
       </Container>
-      <Button>
-        <p>Become Helper</p>
-      </Button>
+      <Link
+        to="contact-form"
+        spy={true}
+        smooth={true}
+        duration={1400}
+        onClick={() => handleSelector(8)}
+      >
+        <Button>
+          <p>Become Helper</p>
+        </Button>
+      </Link>
     </Section>
   );
 }

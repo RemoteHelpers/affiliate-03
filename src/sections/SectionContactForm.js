@@ -4,9 +4,6 @@ import Container from "../components/Container";
 import Title from "../components/Title";
 import Form from "../components/Form";
 import List from "../components/List";
-import { ReactComponent as Skype } from "../svg/skype.svg";
-import { ReactComponent as Telegram } from "../svg/telegram.svg";
-import { ReactComponent as Viber } from "../svg/viber.svg";
 import { ReactComponent as WhatsApp } from "../svg/whatsapp.svg";
 import { ReactComponent as Email } from "../svg/email.svg";
 import contactFormTemplate from "../data/contactFormTemplate.json";
@@ -39,34 +36,22 @@ function SectionContactForm() {
         <List
           className="social-link-list"
           list={[
-            <li className="social-link-item" key="social-link-skype">
-              <a>
-                <Skype className="skype-svg" width={40} height={40} />
-                <p>youisrael</p>
-              </a>
-            </li>,
-            <li className="social-link-item" key="social-link-telegram">
-              <a>
-                <Telegram className="telegram-svg" width={40} height={40} />
-                <p>@nikokardc</p>
-              </a>
-            </li>,
             <li className="social-link-item" key="social-link-email">
-              <a>
+              <a href="mailto:sales@rh-s.com">
                 <Email className="email-svg" width={40} height={40} />
-                <p>@sales@rh-s.com</p>
+                <p>sales@rh-s.com</p>
               </a>
             </li>,
             <li className="social-link-item" key="social-link-viber">
-              <a>
-                <Viber className="viber-svg" width={40} height={40} />
-                <p>+38 099 710 10 33</p>
+              <a href="mailto:finance@rh-s.com">
+                <Email className="email-svg" width={40} height={40} />
+                <p>finance@rh-s.com</p>
               </a>
             </li>,
             <li className="social-link-item" key="social-link-whatsapp">
-              <a>
+              <a href="https://api.whatsapp.com/send?phone=380666146468">
                 <WhatsApp className="whatsapp-svg" width={40} height={40} />
-                <p>+97 250 901 4509</p>
+                <p>+380 (66) 614-6468</p>
               </a>
             </li>,
           ]}

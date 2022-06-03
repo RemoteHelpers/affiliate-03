@@ -1,7 +1,6 @@
 .footer {
   @media screen and(min-width: $mobile) {
     padding-bottom: 32px;
-    a,
     p {
       width: fit-content;
       display: block;
@@ -9,16 +8,8 @@
       margin-right: auto;
       margin-left: auto;
     }
-    a {
-      text-decoration: underline;
-      margin-top: 25px;
-      &:hover {
-        color: $accentYellow;
-      }
-    }
   }
-  @media screen and(min-width: $mobile) {
-    a,
+  @media screen and(min-width: $tablet) {
     p {
       font-size: 16px;
     }
@@ -28,14 +19,6 @@
       position: absolute;
       bottom: 0;
       padding-bottom: 20px;
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-    }
-    a {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
     }
   }
 }
