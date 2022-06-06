@@ -1,4 +1,6 @@
-import { useState } from "react";
+import axios from "axios";
+import { useContext } from "react";
+import { btnContext } from "../App";
 import Section from "../components/Section";
 import Container from "../components/Container";
 import Title from "../components/Title";
@@ -9,11 +11,30 @@ import { ReactComponent as Email } from "../svg/email.svg";
 import contactFormTemplate from "../data/contactFormTemplate.json";
 
 function SectionContactForm() {
-  const [data, setData] = useState({});
+  const { handleToggleModal, handleStatusForm } = useContext(btnContext);
 
-  const handleSubmit = () => {
-    console.log(data);
+  const handleSubmit = e => {
+    e.preventDefault();
+    handleToggleModal();
+    handleStatusForm(0);
+    const formData = new FormData(e.currentTarget);
+    formData.set("global_company_name", "Remote Helpers");
+    formData.set("project_company", "1.rh-s.com");
+    formData.set("promocode", "MVO1Z1W21WOS");
+    if (!formData.get("note")) formData.set("note", "-");
+
+    axios
+      .post("https://crm-s.com/api/v1/leads-public", formData)
+      .then(response => {
+        console.log(response.data);
+        handleStatusForm(1);
+      })
+      .catch(error => {
+        console.log(error.message);
+        handleStatusForm(2);
+      });
   };
+
   return (
     <Section className="section-contact-form" id="contact-form">
       <Container className="title-container">

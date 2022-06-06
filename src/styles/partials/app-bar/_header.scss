@@ -4,6 +4,9 @@
     border-bottom: 2px solid white;
     .container {
       display: flex;
+      .inner-flex-container {
+        display: flex;
+      }
     }
   }
   @media screen and(min-width: $mobileMax) {
@@ -36,5 +39,10 @@
   }
   @media screen and(min-width: $fullHD) {
     height: 100px;
+    border-bottom: none;
+    .container {
+      width: 1728px;
+      justify-content: space-between;
+    }
   }
 }

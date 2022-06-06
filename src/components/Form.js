@@ -4,7 +4,7 @@ function Form({ className, formFields, onSubmit }) {
       <div className="input-container">
         {formFields
           .filter(({ tag }) => tag === "input")
-          .map(({ name, placeholder, required, hidden, type }) => {
+          .map(({ name, placeholder, required, type }) => {
             return (
               <input
                 key={`input: ${name}`}
@@ -12,14 +12,13 @@ function Form({ className, formFields, onSubmit }) {
                 name={name}
                 placeholder={placeholder}
                 required={required}
-                hidden={hidden}
               />
             );
           })}
       </div>
       {formFields
         .filter(({ tag }) => tag !== "input")
-        .map(({ tag, name, placeholder, required, hidden, type }) => {
+        .map(({ tag, name, placeholder, required, type }) => {
           const Tag = tag;
           return (
             <Tag
@@ -28,7 +27,6 @@ function Form({ className, formFields, onSubmit }) {
               name={name}
               placeholder={placeholder}
               required={required}
-              hidden={hidden}
             />
           );
         })}
@@ -38,11 +36,3 @@ function Form({ className, formFields, onSubmit }) {
 }
 
 export default Form;
-// <Tag
-//   key={name}
-//   type={type}
-//   name={name}
-//   placeholder={placeholder}
-//   required={required}
-//   hidden={hidden}
-// />

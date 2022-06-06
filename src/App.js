@@ -3,6 +3,7 @@ import debounce from "lodash/debounce";
 import classNames from "classnames";
 import { sectionsAll } from "./data/sectionsData";
 import ModalMenu from "./components/ModalMenu";
+import ModalThankYou from "./components/ModalThankYou";
 import Slider from "./Slider";
 import MobileSite from "./MobileSite";
 
@@ -13,14 +14,20 @@ function App() {
   const [height, setHeight] = useState(0);
   const [modalOpen, setModalOpen] = useState(false);
   const [currentSection, setCurrentSection] = useState(0);
+  const [statusForm, setStatusForm] = useState(-1);
 
   const handleSelector = selector => setCurrentSection(selector);
   const handleSectionScroll = section => setCurrentSection(section);
   const handleToggleModal = () => setModalOpen(!modalOpen);
+  const handleStatusForm = status => setStatusForm(status);
 
   const modalClassName = classNames({
-    "backdrop is-active": modalOpen,
-    backdrop: !modalOpen,
+    backdrop: !modalOpen && statusForm === -1,
+    "backdrop is-active": modalOpen && statusForm === -1,
+  });
+  const thankYouModalClassName = classNames({
+    "thank-you-backdrop": !modalOpen && statusForm === -1,
+    "thank-you-backdrop is-active": modalOpen && statusForm >= 0,
   });
 
   useEffect(() => {
@@ -46,6 +53,7 @@ function App() {
         handleSelector,
         handleSectionScroll,
         handleToggleModal,
+        handleStatusForm,
       }}
     >
       {1200 > width ? (
@@ -54,6 +62,12 @@ function App() {
         <Slider height={height} index={currentSection} />
       )}
       {<ModalMenu className={modalClassName} width={width} />}
+      {
+        <ModalThankYou
+          className={thankYouModalClassName}
+          statusForm={statusForm}
+        />
+      }
     </btnContext.Provider>
   );
 }

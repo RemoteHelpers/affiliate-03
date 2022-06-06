@@ -42,5 +42,8 @@
         }
       }
     }
+    @media screen and(min-width: $fullHD) {
+      border-right: none;
+    }
   }
 }

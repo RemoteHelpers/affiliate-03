@@ -47,9 +47,11 @@
           background-color: transparent;
           border: 1px solid $accentYellow;
           transition: 0.3s ease-out;
-          &:hover {
+          &:hover,
+          &:focus {
             background-color: $accentYellow;
             color: $blackContent;
+            outline: 1px solid $accentYellow;
           }
         }
       }
@@ -122,7 +124,7 @@
           height: 24vh;
         }
         .submit-btn {
-          height: 52px;
+          height: auto;
           font-size: 36px;
         }
       }
