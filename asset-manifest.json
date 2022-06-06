@@ -1,26 +1,23 @@
 {
   "files": {
-    "main.css": "/affiliate-03/static/css/main.0f519c05.css",
-    "main.js": "/affiliate-03/static/js/main.c8b16dca.js",
+    "main.css": "/affiliate-03/static/css/main.fc50ae6b.css",
+    "main.js": "/affiliate-03/static/js/main.0da69be4.js",
     "static/media/AbroSans-Regular.ttf": "/affiliate-03/static/media/AbroSans-Regular.73b0e0893a9d0333a36e.ttf",
     "static/media/AbroSans-Bold.ttf": "/affiliate-03/static/media/AbroSans-Bold.42f139025321fc2c5b7e.ttf",
     "static/media/number-wrapper.svg": "/affiliate-03/static/media/number-wrapper.c21b0180d73c7e1246d5.svg",
     "static/media/logo-hover.svg": "/affiliate-03/static/media/logo-hover.0d39da1f1ad5eee600895146bd661dc5.svg",
-    "static/media/viber.svg": "/affiliate-03/static/media/viber.b9eecbfc041bcc5c151304e8810d0793.svg",
     "static/media/whatsapp.svg": "/affiliate-03/static/media/whatsapp.f2c3bdf56520c1f70a6141e78b5564e1.svg",
     "static/media/email.svg": "/affiliate-03/static/media/email.32150cc0b5acdc7dfe10254815413186.svg",
-    "static/media/skype.svg": "/affiliate-03/static/media/skype.575c2cd400418438e77675599f7edb04.svg",
     "index.html": "/affiliate-03/index.html",
-    "static/media/telegram.svg": "/affiliate-03/static/media/telegram.7662ef01dfec2f457b1ac5b54f38fca3.svg",
     "static/media/scroll-arrow.svg": "/affiliate-03/static/media/scroll-arrow.ac81695e433b02f7d4bd49fdd739fe02.svg",
     "static/media/burger-menu.svg": "/affiliate-03/static/media/burger-menu.0f9e808dbfb63fd978bea77543c9585c.svg",
     "static/media/arrow.svg": "/affiliate-03/static/media/arrow.2dc3ce4fb6ce44e21596d72e3d4db0d3.svg",
     "static/media/close-modal.svg": "/affiliate-03/static/media/close-modal.ff4c9e214c7235845f33f672cd7bb998.svg",
-    "main.0f519c05.css.map": "/affiliate-03/static/css/main.0f519c05.css.map",
-    "main.c8b16dca.js.map": "/affiliate-03/static/js/main.c8b16dca.js.map"
+    "main.fc50ae6b.css.map": "/affiliate-03/static/css/main.fc50ae6b.css.map",
+    "main.0da69be4.js.map": "/affiliate-03/static/js/main.0da69be4.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f519c05.css",
-    "static/js/main.c8b16dca.js"
+    "static/css/main.fc50ae6b.css",
+    "static/js/main.0da69be4.js"
   ]
 }
