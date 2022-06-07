@@ -13,10 +13,7 @@ function ModalThankYou({ className, statusForm }) {
     document.querySelector(".contact-form").reset();
   };
   const handleBackdropClick = e => {
-    if (
-      e.target.className === "thank-you-backdrop is-active" &&
-      statusForm === 1
-    )
+    if (e.target.className === "thank-you-backdrop is-active" && statusForm > 0)
       handleCloseAndReset();
   };
 

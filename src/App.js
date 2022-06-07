@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, createContext } from "react";
+import React, { useEffect, useState, useCallback, memo } from "react";
 import debounce from "lodash/debounce";
 import classNames from "classnames";
 import { sectionsAll } from "./data/sectionsData";
@@ -7,7 +7,7 @@ import ModalThankYou from "./components/ModalThankYou";
 import Slider from "./Slider";
 import MobileSite from "./MobileSite";
 
-export const btnContext = createContext();
+export const btnContext = React.createContext();
 
 function App() {
   const [width, setWidth] = useState(0);
@@ -25,17 +25,15 @@ function App() {
     backdrop: !modalOpen && statusForm === -1,
     "backdrop is-active": modalOpen && statusForm === -1,
   });
-  const thankYouModalClassName = classNames({
+  const thankYouClass = classNames({
     "thank-you-backdrop": !modalOpen && statusForm === -1,
     "thank-you-backdrop is-active": modalOpen && statusForm >= 0,
   });
 
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
-  }, []);
   useEffect(
     useCallback(() => {
+      setWidth(window.innerWidth);
+      setHeight(window.innerHeight);
       window.addEventListener(
         "resize",
         debounce(e => {
@@ -43,10 +41,9 @@ function App() {
           setHeight(e.target.innerHeight);
         }, 1000),
       );
-    }, [width, height]),
+    }, []),
     [],
   );
-
   return (
     <btnContext.Provider
       value={{
@@ -62,14 +59,9 @@ function App() {
         <Slider height={height} index={currentSection} />
       )}
       {<ModalMenu className={modalClassName} width={width} />}
-      {
-        <ModalThankYou
-          className={thankYouModalClassName}
-          statusForm={statusForm}
-        />
-      }
+      {<ModalThankYou className={thankYouClass} statusForm={statusForm} />}
     </btnContext.Provider>
   );
 }
 
-export default App;
+export default memo(App);
