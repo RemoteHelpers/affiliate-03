@@ -1,16 +1,15 @@
 import { useContext, useEffect, useCallback, memo } from "react";
 import { btnContext } from "./App";
 import AppBar from "./sections/AppBar";
-import { sectionsAll } from "./data/sectionsData";
 
-function Slider({ height, index }) {
+function Slider({ height, index, sections }) {
   const { handleSectionScroll } = useContext(btnContext);
-  window.location.hash = sectionsAll[index].id;
+  window.location.hash = sections[index].id;
 
   const scrollHandler = useCallback(
     e => {
       if (e.deltaY === 100) {
-        if (index === sectionsAll.length - 1) return;
+        if (index === sections.length - 1) return;
         handleSectionScroll(index + 1);
       } else {
         if (index === 0) return;
@@ -33,7 +32,7 @@ function Slider({ height, index }) {
       className="slider-container"
     >
       <AppBar />
-      {sectionsAll[index].section}
+      {sections[index].section}
     </div>
   );
 }

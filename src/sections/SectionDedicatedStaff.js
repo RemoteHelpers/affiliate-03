@@ -10,7 +10,6 @@ import { btnContext } from "../App";
 
 function SectionDedicatedStaff() {
   const { handleSelector } = useContext(btnContext);
-  let count = 0;
 
   return (
     <Section className="section-dedicated-staff" id="dedicated-staff">
@@ -21,10 +20,10 @@ function SectionDedicatedStaff() {
         <List
           className="dedicated-staff-list"
           list={[
-            dedicatedStaffData.map(item => (
+            dedicatedStaffData.map((item, index) => (
               <li className="dedicated-staff-item" key={item}>
                 <Container tag="div" className="number-container">
-                  <p>{++count}</p>
+                  <p>{++index}</p>
                 </Container>
                 <Container tag="div" className="description-container">
                   <p>{item}</p>

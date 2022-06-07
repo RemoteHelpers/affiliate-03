@@ -56,7 +56,7 @@ function App() {
       {1200 > width ? (
         <MobileSite sections={sectionsAll} />
       ) : (
-        <Slider height={height} index={currentSection} />
+        <Slider height={height} index={currentSection} sections={sectionsAll} />
       )}
       {<ModalMenu className={modalClassName} width={width} />}
       {<ModalThankYou className={thankYouClass} statusForm={statusForm} />}
