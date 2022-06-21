@@ -37,7 +37,7 @@
         display: block;
         padding-top: 0;
         opacity: 1;
-        animation: titleAppear 3s ease-in-out infinite;
+        animation: titleAppear 3s ease-in-out;
       }
     }
     @media screen and(min-width: $desktop) and(max-height: 832px) {

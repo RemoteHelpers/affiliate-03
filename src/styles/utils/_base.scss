@@ -104,9 +104,15 @@ h2,
 h3,
 h4 {
   font-family: "AbroSans-Bold";
+  &:hover {
+    cursor: default;
+  }
 }
 p {
   font-family: "AbroSans-Regular";
+  &:hover {
+    cursor: default;
+  }
 }
 @media screen and(min-width: $desktop) {
   body {
