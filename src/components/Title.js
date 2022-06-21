@@ -3,6 +3,7 @@ function Title({ priority = 2, className = "title", children }) {
   return (
     <>
       <HTag className={className}>{children}</HTag>
+      {/* <div onChangeCapture={}></div> */}
     </>
   );
 }

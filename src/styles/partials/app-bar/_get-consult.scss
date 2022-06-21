@@ -7,15 +7,12 @@
       padding-left: 12px;
       border-right: 2px solid white;
       .get-consult-btn {
-        @include standartBtn(157px, 26px, $accentYellow, none);
+        @include standartBtnSquare(157px, 26px, $accentYellow);
         p {
           font-size: 12px;
           line-height: 120%;
           font-weight: 700;
           color: $blackContent;
-        }
-        &:hover {
-          border: 2px dashed white;
         }
       }
     }

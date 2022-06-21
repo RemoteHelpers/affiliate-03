@@ -51,6 +51,7 @@ function App() {
         handleSectionScroll,
         handleToggleModal,
         handleStatusForm,
+        width,
       }}
     >
       {1200 > width ? (

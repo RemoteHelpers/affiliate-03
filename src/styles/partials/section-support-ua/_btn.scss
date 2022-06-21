@@ -1,11 +1,7 @@
 .section-support-ua {
   .btn {
     @media screen and(min-width: $mobile) {
-      @include standartBtn(200px, 200px, transparent, dashed white);
-      border-radius: 50%;
-      padding-top: 10px;
-      margin-left: auto;
-      margin-right: auto;
+      @include standartBtnCircle(200px, 200px, transparent);
       p {
         width: 105px;
         font-family: "AbroSans-Regular";

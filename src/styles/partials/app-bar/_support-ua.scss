@@ -10,13 +10,9 @@
       padding-right: 20px;
       border-right: 2px solid white;
       .support-ua-btn {
-        @include standartBtn(240px, 42px, $accentRed, none);
+        @include standartBtnSquare(240px, 42px, $accentRed);
         p {
           font-size: 18px;
-        }
-        &:hover {
-          background-color: $accentRed;
-          border: 2px dashed white;
         }
         &:hover p {
           color: white;

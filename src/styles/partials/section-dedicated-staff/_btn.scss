@@ -2,11 +2,7 @@
   .btn-container {
     @media screen and(min-width: $mobile) {
       .btn {
-        @include standartBtn(200px, 200px, transparent, dashed white);
-        border-radius: 50%;
-        padding-top: 3px;
-        margin-left: auto;
-        margin-right: auto;
+        @include standartBtnCircle(200px, 200px, transparent);
         p {
           @include standartDescription(24px, 120%);
         }

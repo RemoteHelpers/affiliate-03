@@ -1,3 +1,12 @@
+@keyframes titleAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .hero-section {
   .hero-title {
     @media screen and(min-width: $mobile) {
@@ -21,24 +30,22 @@
     @media screen and(min-width: $tablet) {
       width: 555px;
     }
-    @media screen and(min-width: $desktop) and(max-height: 832px) {
+    @media screen and(min-width: $desktop) {
       width: 100%;
-      font-size: 75px;
+      font-size: 85px;
       span {
+        display: block;
         padding-top: 0;
+        opacity: 1;
+        animation: titleAppear 3s ease-in-out infinite;
       }
-      margin-bottom: 30px;
     }
-    @media screen and(min-width: $desktop) and(min-height: 833px) {
-      font-size: 90px;
-      width: 100%;
-      span {
-        padding-top: 0;
-      }
+    @media screen and(min-width: $desktop) and(max-height: 832px) {
+      margin-bottom: 30px;
     }
     @media screen and(min-width: $fullHD) {
       min-width: 100%;
-      font-size: 140px;
+      font-size: 135px;
       margin-bottom: 50px;
     }
   }

@@ -9,24 +9,85 @@ $tabletMax: 992px;
 $desktop: 1200px;
 $fullHD: 1920px;
 
-@mixin standartBtn($w, $h, $bc, $b) {
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes section {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes border-dance {
+  0% {
+    background-position: left top, right top, right bottom, left bottom;
+  }
+  100% {
+    background-position: right top, right bottom, left bottom, left top;
+  }
+}
+@mixin standartBtnCircle($w, $h, $bc) {
+  position: relative;
+  width: $w;
+  height: $h;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 0;
+  background-color: $bc;
+  transition: all 0.3s ease-out;
+  p {
+    transition: 0.3s ease-out;
+  }
+  &:hover::before {
+    border: none;
+  }
+  &:hover {
+    background-color: $accentYellow;
+  }
+  &:hover p {
+    color: $blackContent;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 100%;
+    border: 3px dashed white;
+    animation: rotate 20s linear infinite;
+  }
+}
+@mixin standartBtnSquare($w, $h, $bc) {
+  position: relative;
   width: $w;
   height: $h;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: $bc;
-  border: $b;
-  transition: 0.3s ease-out;
-  p {
-    transition: 0.3s ease-out;
-  }
   &:hover {
-    background-color: $accentYellow;
-    border: none;
-  }
-  &:hover p {
-    color: $blackContent;
+    background: linear-gradient(90deg, white 50%, transparent 50%),
+      linear-gradient(0deg, white 50%, transparent 50%),
+      linear-gradient(90deg, white 50%, transparent 50%),
+      linear-gradient(0deg, white 50%, transparent 50%);
+    background-color: $bc;
+    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+    background-size: 15px 2px, 2px 15px, 15px 2px, 2px 15px;
+    background-position: left top, right top, left bottom, left top;
+    animation: border-dance 4s infinite linear;
   }
 }
 @mixin standartTitle($fs, $lh) {
