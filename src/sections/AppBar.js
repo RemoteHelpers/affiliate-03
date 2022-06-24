@@ -26,11 +26,18 @@ function AppBar() {
       </Container>
       <Container className="inner-flex-container">
         <Container tag="div" className="support-ua-container">
-          <a href="#support-ua" data-index={1} onClick={handleLinkClick}>
+          <Link
+            to="support-ua"
+            data-index={1}
+            onClick={handleLinkClick}
+            spy={true}
+            smooth={true}
+            duration={1600}
+          >
             <Button type="button" className="support-ua-btn">
               <p>Support Ukrainians</p>
             </Button>
-          </a>
+          </Link>
         </Container>
         <List
           className="social-link-list"

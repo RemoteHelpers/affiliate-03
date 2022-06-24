@@ -51,12 +51,7 @@ export const sectionsAll = [
     id: "#customers-say",
   },
   {
-    section: (
-      <>
-        <SectionContactForm />
-        <Footer />
-      </>
-    ),
+    section: <SectionContactForm />,
     name: "SectionContactForm",
     id: "#contact-form",
   },

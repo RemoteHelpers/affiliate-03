@@ -17,7 +17,6 @@ function App() {
   const [statusForm, setStatusForm] = useState(-1);
 
   const handleSelector = selector => setCurrentSection(selector);
-  const handleSectionScroll = section => setCurrentSection(section);
   const handleToggleModal = () => setModalOpen(!modalOpen);
   const handleStatusForm = status => setStatusForm(status);
 
@@ -44,11 +43,11 @@ function App() {
     }, []),
     [],
   );
+  console.log(currentSection);
   return (
     <btnContext.Provider
       value={{
         handleSelector,
-        handleSectionScroll,
         handleToggleModal,
         handleStatusForm,
         width,

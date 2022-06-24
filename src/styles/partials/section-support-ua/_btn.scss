@@ -1,4 +1,8 @@
 .section-support-ua {
+  a {
+    display: flex;
+    align-items: center;
+  }
   .btn {
     @media screen and(min-width: $mobile) {
       @include standartBtnCircle(200px, 200px, transparent);

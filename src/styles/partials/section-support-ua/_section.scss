@@ -5,10 +5,8 @@
   @media screen and(min-width: $desktop) {
     padding-top: 6vh;
     padding-bottom: 0;
-    .container {
+    .flex-content-container {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
     }
   }
   @media screen and(min-width: $fullHD) {

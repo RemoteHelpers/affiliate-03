@@ -1,38 +1,40 @@
-import { useContext, useEffect, useCallback, memo } from "react";
+import { useContext, useState, useEffect, useCallback, memo } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 import { btnContext } from "./App";
 import AppBar from "./sections/AppBar";
+import Footer from "./sections/Footer";
 
 function Slider({ height, index, sections }) {
-  const { handleSectionScroll } = useContext(btnContext);
-  window.location.hash = sections[index].id;
-
-  const scrollHandler = useCallback(
+  const [firstSwiper, setFirstSwiper] = useState(null);
+  const { handleSelector } = useContext(btnContext);
+  const onSlideChangeHandler = useCallback(
     e => {
-      if (e.deltaY === 100) {
-        if (index === sections.length - 1) return;
-        handleSectionScroll(index + 1);
-      } else {
-        if (index === 0) return;
-        handleSectionScroll(index - 1);
-      }
+      handleSelector(e.activeIndex);
     },
-    [index],
+    [handleSelector],
   );
 
-  useEffect(
-    useCallback(() => {
-      handleSectionScroll(index);
-    }, [index]),
-    [index],
-  );
+  useEffect(() => {
+    if (firstSwiper) {
+      firstSwiper.slideTo(index, 1000);
+    }
+  }, [index, firstSwiper]);
+
   return (
-    <div
-      style={{ height: height }}
-      onWheel={scrollHandler}
-      className="slider-container"
-    >
+    <div style={{ height: height }} className="slider-container">
       <AppBar />
-      {sections[index].section}
+      <Swiper
+        grabCursor={true}
+        slidesPerView={1}
+        onSlideChange={onSlideChangeHandler}
+        onSwiper={setFirstSwiper}
+      >
+        {sections.map(({ name, section }) => (
+          <SwiperSlide key={name}>{section}</SwiperSlide>
+        ))}
+      </Swiper>
+      {index === 8 && <Footer />}
     </div>
   );
 }

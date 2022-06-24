@@ -5,7 +5,6 @@ import { Link } from "react-scroll/modules";
 import modalMenuData from "../data/modalMenuData.json";
 import { ReactComponent as Logo } from "../svg/logo-hover.svg";
 import { ReactComponent as CloseModal } from "../svg/close-modal.svg";
-import "../styles/modal.css";
 
 function ModalMenu({ className, width }) {
   const { handleToggleModal, handleSelector } = useContext(btnContext);

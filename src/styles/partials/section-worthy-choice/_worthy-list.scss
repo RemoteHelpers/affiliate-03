@@ -19,7 +19,11 @@
             display: inline;
             top: 0;
             right: -53.5px;
+            transition: all 0.5s ease-in-out;
           }
+        }
+        &:hover .item-title::after {
+          transform: rotate(-180deg);
         }
         .description-container {
           width: 50vw;

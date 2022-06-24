@@ -64,6 +64,9 @@
       .speciality-item {
         width: 25%;
         border-bottom: none;
+        &:hover {
+          background-color: black;
+        }
         .item-title {
           margin-bottom: 20px;
           font-size: 32px;

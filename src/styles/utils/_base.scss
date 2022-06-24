@@ -16,6 +16,7 @@ a {
   border: none;
   padding: 0;
   margin: 0;
+  user-select: none;
   &:hover {
     cursor: pointer;
   }
@@ -125,5 +126,21 @@ p {
 section {
   @media screen and(min-width: $desktop) {
     animation: section 0.3s ease-out;
+    height: calc(100vh - min(100px, 10vh));
+  }
+}
+@media screen and(min-width: $desktop) {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    &:hover {
+      cursor: grab;
+    }
+  }
+  section .container {
+    min-height: 100%;
   }
 }

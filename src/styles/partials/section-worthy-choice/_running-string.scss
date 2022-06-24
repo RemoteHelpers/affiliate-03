@@ -1,0 +1,19 @@
+@media screen and(min-width: $mobile) {
+  .running-string-container {
+    // margin-top: 100px;
+    position: absolute !important;
+    bottom: 0;
+    left: 0;
+  }
+  .running-string-text {
+    font-family: "AbroSans-Bold";
+    opacity: 0.2;
+    text-transform: uppercase;
+    font-size: clamp(25px, 5vw, 80px);
+  }
+}
+@media screen and(min-width: $desktop) {
+  .running-string-text {
+    // font-size: 80px;
+  }
+}

@@ -60,11 +60,13 @@
         width: 230px;
         height: 230px;
         filter: blur(111.79px);
+        z-index: 10;
       }
       &::before {
         width: 240px;
         height: 660px;
         filter: blur(121.79px);
+        z-index: 10;
       }
     }
   }

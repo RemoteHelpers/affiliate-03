@@ -40,43 +40,45 @@ function SectionContactForm() {
       <Container className="title-container">
         <Title>Let's have a chat</Title>
       </Container>
-      <Container className="contact-form-container">
-        <Title priority={3} className="form-title">
-          How can we contact you?
-        </Title>
-        <Form
-          className="contact-form"
-          formFields={contactFormTemplate}
-          onSubmit={handleSubmit}
-        />
-      </Container>
-      <Container className="social-link-container">
-        <Title priority={3} className="social-link-title">
-          Contacts
-        </Title>
-        <List
-          className="social-link-list"
-          list={[
-            <li className="social-link-item" key="social-link-email">
-              <a href="mailto:sales@rh-s.com">
-                <Email className="email-svg" width={40} height={40} />
-                <p>sales@rh-s.com</p>
-              </a>
-            </li>,
-            <li className="social-link-item" key="social-link-viber">
-              <a href="mailto:finance@rh-s.com">
-                <Email className="email-svg" width={40} height={40} />
-                <p>finance@rh-s.com</p>
-              </a>
-            </li>,
-            <li className="social-link-item" key="social-link-whatsapp">
-              <a href="https://api.whatsapp.com/send?phone=380666146468">
-                <WhatsApp className="whatsapp-svg" width={40} height={40} />
-                <p>+380 (66) 614-6468</p>
-              </a>
-            </li>,
-          ]}
-        />
+      <Container className="flex-content-container">
+        <Container className="contact-form-container">
+          <Title priority={3} className="form-title">
+            How can we contact you?
+          </Title>
+          <Form
+            className="contact-form"
+            formFields={contactFormTemplate}
+            onSubmit={handleSubmit}
+          />
+        </Container>
+        <Container className="social-link-container">
+          <Title priority={3} className="social-link-title">
+            Contacts
+          </Title>
+          <List
+            className="social-link-list"
+            list={[
+              <li className="social-link-item" key="social-link-email">
+                <a href="mailto:sales@rh-s.com">
+                  <Email className="email-svg" width={40} height={40} />
+                  <p>sales@rh-s.com</p>
+                </a>
+              </li>,
+              <li className="social-link-item" key="social-link-viber">
+                <a href="mailto:finance@rh-s.com">
+                  <Email className="email-svg" width={40} height={40} />
+                  <p>finance@rh-s.com</p>
+                </a>
+              </li>,
+              <li className="social-link-item" key="social-link-whatsapp">
+                <a href="https://api.whatsapp.com/send?phone=380666146468">
+                  <WhatsApp className="whatsapp-svg" width={40} height={40} />
+                  <p>+380 (66) 614-6468</p>
+                </a>
+              </li>,
+            ]}
+          />
+        </Container>
       </Container>
     </Section>
   );

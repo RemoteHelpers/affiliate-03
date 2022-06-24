@@ -1,6 +1,7 @@
 .header {
   @media screen and(min-width: $mobile) {
     height: 50px;
+    background-color: $blackContent;
     border-bottom: 2px solid white;
     .container {
       display: flex;
@@ -33,6 +34,7 @@
   }
   @media screen and(min-width: $desktop) {
     height: min(100px, 10vh);
+    isolation: isolate;
     .container {
       width: 1170px;
     }

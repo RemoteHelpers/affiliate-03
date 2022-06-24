@@ -2,7 +2,6 @@ import { createPortal } from "react-dom";
 import { useContext } from "react";
 import { btnContext } from "../App";
 import Spinner from "./Loader";
-import "../styles/modal.css";
 
 function ModalThankYou({ className, statusForm }) {
   const { handleToggleModal, handleStatusForm } = useContext(btnContext);

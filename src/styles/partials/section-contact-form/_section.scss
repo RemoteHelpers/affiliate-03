@@ -3,16 +3,14 @@
     padding-bottom: 130px;
   }
   @media screen and(min-width: $desktop) {
-    padding-bottom: 6vh;
     padding-top: 6vh;
-    .container {
+    .flex-content-container {
+      margin-top: 5vh;
       display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
       justify-content: space-between;
     }
   }
-  @media screen and(min-width: $desktop) {
+  @media screen and(min-width: $fullHD) {
     padding-top: 60px;
     padding-bottom: 60px;
   }

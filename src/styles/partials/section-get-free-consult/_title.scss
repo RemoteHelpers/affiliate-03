@@ -14,7 +14,7 @@
         position: absolute;
         right: 0;
         top: 25%;
-        transform: rotate(180deg);
+        transform: rotate(0deg);
       }
     }
     @media screen and(min-width: $mobileMax) {
@@ -24,8 +24,19 @@
     }
     @media screen and(min-width: $desktop) {
       margin-bottom: 4vh;
+      &:hover {
+        background-color: black;
+      }
       .title {
         font-size: min(60px, 7vh);
+      }
+      .arrow-svg {
+        top: 20%;
+        transition: all 0.5s ease-in-out;
+      }
+      &:hover .arrow-svg {
+        transform: translateY(-50%);
+        transform: rotate(-180deg);
       }
     }
     @media screen and(min-width: $fullHD) {
